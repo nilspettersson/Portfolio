@@ -12,8 +12,29 @@ body{
 
 
 .header{
-    padding: 300px;
-    background: rgb(20, 20, 20);
+    padding:14%;
+    background:rgb(40, 40, 40);
     color: white;
     text-align: center;
+}
+
+
+.container{
+    margin: auto;
+}
+
+.grid{
+    margin: 0px 20px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+}
+
+.grid-about{
+    color:rgb(40, 40, 40);
+    height:100px;
+    background: rgb(255, 255, 255);
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
