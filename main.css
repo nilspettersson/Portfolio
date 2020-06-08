@@ -24,11 +24,15 @@ body{
 }
 
 .grid{
-    margin: 0px 20px;
+    margin: 20px 20px;
     display: grid;
     text-align: center;
     grid-template-columns: 1fr 1fr;
     background: white;
+}
+
+.space{
+    margin: 20px;
 }
 
 .grid-about{
@@ -37,4 +41,16 @@ body{
     background: rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+.grid-skills-header{
+    color:rgb(40, 40, 40);
+    background: rgb(255, 255, 255);
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid-skills{
+    color:rgb(40, 40, 40);
+    height:100px;
+    background: rgb(255, 255, 255);
 }
