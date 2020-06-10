@@ -6,6 +6,20 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+    line-height: 60%;
+}
+h2{
+    line-height: 60%;
+}
+h3{
+    line-height: 60%;
+}
+
+p{
+    line-height: 150%;
+}
+
 .icon{
     width:40px;
 }
@@ -14,13 +28,13 @@ body{
 .header{
     padding:14%;
     background:rgb(40, 40, 40);
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
 
 .container{
-    margin: 0px 200px;
+    
 }
 
 
@@ -31,35 +45,38 @@ body{
 
 
 .projects{
+    
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background:rgb(255, 255, 255);
-    padding: 16px 10px;
 
-    box-shadow: 0px 8px 10px rgb(156, 156, 156);
+    
 }
 
 .project{
+    background:rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 3;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    
+    margin-top: 20px;
+    padding: 20px 40px;
+
+    /*box-shadow: 0px 5px 6px rgb(156, 156, 156);*/
 }
 
 .project-header{
-    color:rgb(40, 40, 40);
-    background: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    background:#113c69;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
 .project-image{
     text-align: center;
-    margin-bottom: 40px;
 }
 img{
     width: 80%;
@@ -68,6 +85,33 @@ img{
 .project-desc{
     text-align: left;
     padding-left: 16px;
-    margin-bottom: 40px;
     color:rgb(40, 40, 40);
+}
+
+.skills{
+    margin-bottom: 40px;
+}
+.skills a{
+    font-size: 0.7em;
+    padding: 8px 10px;
+    background:#cccccc ;
+    border-radius: 40%;
+}
+
+.button{
+    margin-right: 10px;
+    text-decoration: none;
+    background:#ac3b61 ;
+    color: white;
+    border-radius: 40%;
+    padding: 14px 14px;
+    box-shadow: 0px 0px 5px rgb(95, 95, 95);
+    transition-property:box-shadow;
+    
+}
+.button:hover{
+    background:#7a2a45 ;
+    box-shadow: 0px 0px 0px rgb(97, 97, 97);
+    transition-duration: 150ms;
+   
 }
