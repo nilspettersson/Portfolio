@@ -7,14 +7,9 @@ body{
 }
 
 h1{
-    line-height: 60%;
+    font-weight: 800;
 }
-h2{
-    line-height: 60%;
-}
-h3{
-    line-height: 60%;
-}
+
 
 p{
     line-height: 150%;
@@ -24,25 +19,21 @@ p{
     width:40px;
 }
 
+img{
+    width: 80%;
+}
 
 .header{
-    padding:14%;
+    padding:300px 0px;
     background:rgb(40, 40, 40);
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
 
-.container{
-    
-}
-
-
 .space{
     margin: 20px;
 }
-
-
 
 .projects{
     
@@ -70,22 +61,38 @@ p{
 
 .project-header{
     color:rgb(255, 255, 255);
-    background:#113c69;
+    background:#3b86ac;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
 .project-image{
     text-align: center;
+    background: rgb(255, 255, 255);
 }
-img{
-    width: 80%;
+.project-image img{
+    border: solid 7px rgb(40, 40, 40);;
+    border-radius: 9px;
+    box-shadow: 1px 3px 8px rgb(46, 46, 46);
 }
+
 
 .project-desc{
     text-align: left;
     padding-left: 16px;
     color:rgb(40, 40, 40);
+}
+.project-desc h1{
+    color: #ac3b61;
+    border-bottom: solid 3px #ac3b61;
+}
+.project-desc h3{
+    font-size: 1em;
+    font-weight: 800;
+    /*color: #ac3b61;*/
+}
+.project-desc p{
+    color: rgb(68, 68, 68);
 }
 
 .skills{
@@ -94,11 +101,13 @@ img{
 .skills a{
     font-size: 0.7em;
     padding: 8px 10px;
+    margin-right: 4px;
     background:#cccccc ;
     border-radius: 40%;
 }
 
 .button{
+    display: inline-block;
     margin-right: 10px;
     text-decoration: none;
     background:#ac3b61 ;
