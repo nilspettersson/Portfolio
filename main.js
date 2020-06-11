@@ -1,3 +1,102 @@
+window.onload = function(){
+    var descripton = "This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das";
+    var learned = "from creating this project I learned how to do stuff and that will help me with stuff!";
+    var skills = ["JavaScript", "C#", "C#", "asp.net"];
+    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
+}
+
+
+
+function createProject(imageSrc, title, descripton, learned, skills){
+    var project = document.createElement("div");
+    project.classList.add("project");
+
+    //div for image
+    var imgDiv = document.createElement("div");
+    imgDiv.classList.add("project-image");
+    
+    var img = document.createElement("img");
+    img.src = imageSrc;
+    imgDiv.appendChild(img);
+
+    //description
+    var desc = document.createElement("div");
+    desc.classList.add("project-desc");
+    var descTitle = document.createElement("h1");
+    descTitle.innerHTML = title;
+    desc.appendChild(descTitle);
+
+    var descDesc = document.createElement("p");
+    descDesc.innerHTML = descripton;
+    desc.appendChild(descDesc);
+
+    //learned
+    var descLearned = document.createElement("h3");
+    descLearned.innerHTML = "What I learned";
+    desc.appendChild(descLearned);
+
+    var descLearnedText = document.createElement("p");
+    descLearnedText.innerHTML = learned;
+    desc.appendChild(descLearnedText);
+
+    //skills
+    var skillsDiv = document.createElement("div");
+    skillsDiv.classList.add("skills");
+    for(var i = 0; i < skills.length;i++){
+        var skill = document.createElement("a");
+        skill.innerHTML = skills[i];
+        skillsDiv.appendChild(skill);
+    }
+    desc.appendChild(skillsDiv);
+
+    //buttons
+    var demo = document.createElement("a");
+    demo.classList.add("button");
+    demo.innerHTML = "Demo";
+    demo.href = "#";
+    desc.appendChild(demo);
+
+    var code = document.createElement("a");
+    code.classList.add("button");
+    code.innerHTML = "View code";
+    code.href = "#";
+    desc.appendChild(code);
+
+    //add to project
+    project.appendChild(imgDiv);
+    project.appendChild(desc);
+    
+    
+    document.getElementById("second").appendChild(project);
+}
+/*
+<div class="project">
+
+<div class="project-image">
+    <img src="projects/test.jpeg">
+</div>
+<div class="project-desc">
+    <h1>Project manager</h1>
+    <p>This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das</p>
+    <h3>What I learned</h3>
+    <p>from creating this project I learned how to do stuff and that will help me with stuff!</p>
+    
+    <div class="skills">
+        <a>JavaScript</a>
+        <a>C#</a>
+        <a>C#</a>
+        <a>asp.net</a>
+    </div>
+    
+    <a href="#" class="button">Demo</a>
+    <a href="#" class="button">View code</a>
+
+</div>
+
+</div>
+*/
+
+
 window.smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container

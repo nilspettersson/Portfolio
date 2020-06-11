@@ -28,7 +28,6 @@ img{
     background-image: url('background.jpg');
     background-color: rgba(0, 0, 0, 0.66);
     background-blend-mode: darken;
-    margin: 0px;
     /*height: 100vh;*/
     padding:35vh 0px;
     /*background:rgb(40, 40, 40);*/
