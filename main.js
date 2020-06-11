@@ -52,7 +52,7 @@ function createProject(imageSrc, title, descripton, learned, skills){
     //buttons
     var demo = document.createElement("a");
     demo.classList.add("button");
-    demo.innerHTML = "Demo";
+    demo.innerHTML = "View project";
     demo.href = "#";
     desc.appendChild(demo);
 
@@ -69,33 +69,6 @@ function createProject(imageSrc, title, descripton, learned, skills){
     
     document.getElementById("second").appendChild(project);
 }
-/*
-<div class="project">
-
-<div class="project-image">
-    <img src="projects/test.jpeg">
-</div>
-<div class="project-desc">
-    <h1>Project manager</h1>
-    <p>This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das</p>
-    <h3>What I learned</h3>
-    <p>from creating this project I learned how to do stuff and that will help me with stuff!</p>
-    
-    <div class="skills">
-        <a>JavaScript</a>
-        <a>C#</a>
-        <a>C#</a>
-        <a>asp.net</a>
-    </div>
-    
-    <a href="#" class="button">Demo</a>
-    <a href="#" class="button">View code</a>
-
-</div>
-
-</div>
-*/
-
 
 window.smoothScroll = function(target) {
     var scrollContainer = target;
@@ -114,7 +87,7 @@ window.smoothScroll = function(target) {
     scroll = function(c, a, b, i) {
         i++; if (i > 30) return;
         c.scrollTop = a + (b - a) / 30 * i;
-        setTimeout(function(){ scroll(c, a, b, i); }, 12);
+        setTimeout(function(){ scroll(c, a, b, i); }, 14);
     }
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);

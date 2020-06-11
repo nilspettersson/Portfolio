@@ -109,7 +109,6 @@ img{
 .project-desc h3{
     font-size: 1em;
     font-weight: 800;
-    /*color: #ac3b61;*/
 }
 .project-desc p{
     color: rgb(68, 68, 68);
@@ -122,7 +121,7 @@ img{
 .skills a{
     font-size: 0.7em;
     padding: 8px 10px;
-    margin-right: 4px;
+    margin-right: 8px;
     background:#cccccc ;
     border-radius: 40%;
 }
