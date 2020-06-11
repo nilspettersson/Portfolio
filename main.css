@@ -1,3 +1,4 @@
+
 body{
     background: rgb(255, 255, 255);
     margin:0;
@@ -24,11 +25,31 @@ img{
 }
 
 .header{
-    padding:300px 0px;
+    margin: 0px;
+    /*height: 100vh;*/
+    padding:41.4vh 0px;
     background:rgb(40, 40, 40);
     color: rgb(255, 255, 255);
     text-align: center;
 }
+.header-button{
+    display: inline-block;
+    margin-top: 80px;
+    text-decoration: none;
+    background:#ac3b61 ;
+    color: white;
+    border-radius: 40%;
+    padding: 14px 14px;
+    transition-property:box-shadow;
+    
+}
+.header-button:hover{
+    background:#7a2a45 ;
+    transition-duration: 150ms;
+   
+}
+
+
 
 
 .space{
@@ -84,7 +105,6 @@ img{
 }
 .project-desc h1{
     color: #ac3b61;
-    border-bottom: solid 3px #ac3b61;
 }
 .project-desc h3{
     font-size: 1em;
@@ -97,6 +117,7 @@ img{
 
 .skills{
     margin-bottom: 40px;
+    margin-top:50px;
 }
 .skills a{
     font-size: 0.7em;

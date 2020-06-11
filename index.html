@@ -10,16 +10,23 @@
 </head>
 <body>
     <div class="header">
-        <h1>Hello, I'm Nils Pettersson</h1>
-        <h3>This is my programing portfolio.</h3>
-        <a href="https://github.com/nilspettersson" target="_blank"> <img class="icon" src="icons/github.png"></a>
+        <div class="header-content">
+            <h1>Hello, I'm Nils Pettersson</h1>
+            <h3>This is my programing portfolio.</h3>
+            <div>
+                <a href="https://github.com/nilspettersson" target="_blank"><img class="icon" src="icons/github.png"></a>
+            </div>
+            <div>
+                <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('second'))">View Portfolio</a>
+            </div>
+        </div>
     </div>
 
     <div class="container">
 
             
 
-            <div class="projects">
+            <div id="second" class="projects">
                 <div class="project-header">
                     <h1>Projects</h1>
                 </div>
