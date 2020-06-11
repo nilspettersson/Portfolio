@@ -25,10 +25,14 @@ img{
 }
 
 .header{
+    background-image: url('background.jpg');
+    background-color: rgba(0, 0, 0, 0.66);
+    background-blend-mode: darken;
     margin: 0px;
     /*height: 100vh;*/
-    padding:41.4vh 0px;
-    background:rgb(40, 40, 40);
+    padding:35vh 0px;
+    /*background:rgb(40, 40, 40);*/
+    
     color: rgb(255, 255, 255);
     text-align: center;
 }
@@ -40,17 +44,14 @@ img{
     color: white;
     border-radius: 40%;
     padding: 14px 14px;
-    transition-property:box-shadow;
+    transition-property:background;
     
 }
 .header-button:hover{
     background:#7a2a45 ;
-    transition-duration: 150ms;
+    transition-duration: 200ms;
    
 }
-
-
-
 
 .space{
     margin: 20px;
