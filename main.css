@@ -98,6 +98,7 @@ img{
 .main-header h1{
     display: inline-block;
     border-bottom: solid 3px black;
+    margin: 0px;
 }
 
 .project-image{
