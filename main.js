@@ -3,6 +3,7 @@ window.onload = function(){
     var learned = "from creating this project I learned how to do stuff and that will help me with stuff!";
     var skills = ["JavaScript", "C#", "C#", "asp.net"];
     createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
+    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
 }
 
 
