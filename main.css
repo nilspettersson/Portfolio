@@ -88,17 +88,16 @@ img{
 }
 
 .main-header{
-    text-align: center;
     color:rgb(60, 60, 60);
-    /*background:#3b86ac;*/
-    
     grid-column-start: 1;
     grid-column-end: 3;
+    text-align: center;
 }
 .main-header h1{
     display: inline-block;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px rgb(60, 60, 60);
     margin: 0px;
+    margin-top: 20px;
 }
 
 .project-image{
