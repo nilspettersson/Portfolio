@@ -77,7 +77,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background:rgb(255, 255, 255);
-    padding: 0px 60px;
+    padding: 0px 10%;
 }
 
 .about{
@@ -97,7 +97,7 @@ img{
     grid-template-columns: 1fr 1fr;
 
     margin-top: 0px;
-    padding: 80px 0px;
+    padding: 30px 0px 80px 0px;
 
 }
 
@@ -107,6 +107,11 @@ img{
     }
     .grid{
         padding: 0px 20px;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .grid{
+        padding: 0px 25%;
     }
 }
 
