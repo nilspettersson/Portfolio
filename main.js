@@ -12,21 +12,54 @@ function createProject(imageSrc, title, descripton, learned, skills){
     var project = document.createElement("div");
     project.classList.add("project");
 
-    //div for image
-    var imgDiv = document.createElement("div");
-    imgDiv.classList.add("project-image");
+    //div left
+    var leftDiv = document.createElement("div");
+    leftDiv.classList.add("project-left");
     
+    //title
+    var descTitle = document.createElement("h1");
+    descTitle.innerHTML = title;
+    leftDiv.appendChild(descTitle);
+
+
+    //image
+    var imageDiv = document.createElement("div");
+    imageDiv.classList.add("image");
+
     var img = document.createElement("img");
     img.src = imageSrc;
-    imgDiv.appendChild(img);
+    imageDiv.appendChild(img);
+
+    leftDiv.appendChild(imageDiv);
+
+
+    //buttons
+    var demo = document.createElement("a");
+    demo.classList.add("button");
+    demo.innerHTML = "View project";
+    demo.href = "#";
+    leftDiv.appendChild(demo);
+
+    var code = document.createElement("a");
+    code.classList.add("button");
+    code.innerHTML = "View code";
+    code.href = "#";
+    leftDiv.appendChild(code);
+
 
     //description
     var desc = document.createElement("div");
     desc.classList.add("project-desc");
-    var descTitle = document.createElement("h1");
-    descTitle.innerHTML = title;
-    desc.appendChild(descTitle);
 
+    var overviewTitle = document.createElement("h3");
+    overviewTitle.innerHTML = "Overview";
+    desc.appendChild(overviewTitle);
+
+    var overview = document.createElement("p");
+    overview.innerHTML = descripton;
+    desc.appendChild(overview);
+
+    //text
     var descDesc = document.createElement("p");
     descDesc.innerHTML = descripton;
     desc.appendChild(descDesc);
@@ -50,21 +83,10 @@ function createProject(imageSrc, title, descripton, learned, skills){
     }
     desc.appendChild(skillsDiv);
 
-    //buttons
-    var demo = document.createElement("a");
-    demo.classList.add("button");
-    demo.innerHTML = "View project";
-    demo.href = "#";
-    desc.appendChild(demo);
-
-    var code = document.createElement("a");
-    code.classList.add("button");
-    code.innerHTML = "View code";
-    code.href = "#";
-    desc.appendChild(code);
+    
 
     //add to project
-    project.appendChild(imgDiv);
+    project.appendChild(leftDiv);
     project.appendChild(desc);
     
     
