@@ -139,15 +139,26 @@ img{
     color: rgb(68, 68, 68);
 }
 
-.skills{
-    margin-bottom: 40px;
-    margin-top:50px;
+.project-left h3{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: rgb(70, 70, 70);
 }
-.skills a{
+.skills{
+
+    margin-bottom: 40px;
+    margin-top:0px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.skills li{
+    margin-bottom: 10px;
+    display: inline-block;
     font-size: 0.7em;
     padding: 8px 10px;
     margin-right: 8px;
-    background:#cccccc ;
+    background:rgb(219, 219, 219) ;
     border-radius: 40%;
 }
 

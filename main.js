@@ -1,7 +1,7 @@
 window.onload = function(){
     var descripton = "This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das";
     var learned = "from creating this project I learned how to do stuff and that will help me with stuff!";
-    var skills = ["JavaScript", "C#", "C#", "asp.net"];
+    var skills = ["JavaScript", "C#", "C#", "asp.net", "sdfd", "asd", "sdsdfg", "asd", "asdd", "asfrt"];
     createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
     createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
 }
@@ -46,6 +46,20 @@ function createProject(imageSrc, title, descripton, learned, skills){
     code.href = "#";
     leftDiv.appendChild(code);
 
+    //skills
+    var skillsTitle = document.createElement("h3");
+    skillsTitle.innerHTML = "Technologies Used";
+
+    var skillsDiv = document.createElement("div");
+    skillsDiv.classList.add("skills");
+    for(var i = 0; i < skills.length;i++){
+        var skill = document.createElement("li");
+        skill.innerHTML = skills[i];
+        skillsDiv.appendChild(skill);
+    }
+    leftDiv.appendChild(skillsTitle);
+    leftDiv.appendChild(skillsDiv);
+
 
     //description
     var desc = document.createElement("div");
@@ -72,17 +86,6 @@ function createProject(imageSrc, title, descripton, learned, skills){
     var descLearnedText = document.createElement("p");
     descLearnedText.innerHTML = learned;
     desc.appendChild(descLearnedText);
-
-    //skills
-    var skillsDiv = document.createElement("div");
-    skillsDiv.classList.add("skills");
-    for(var i = 0; i < skills.length;i++){
-        var skill = document.createElement("a");
-        skill.innerHTML = skills[i];
-        skillsDiv.appendChild(skill);
-    }
-    desc.appendChild(skillsDiv);
-
     
 
     //add to project
