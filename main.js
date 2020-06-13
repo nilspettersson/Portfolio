@@ -1,14 +1,15 @@
 window.onload = function(){
     var descripton = "This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das";
     var learned = "from creating this project I learned how to do stuff and that will help me with stuff!";
-    var skills = ["JavaScript", "C#", "C#", "asp.net", "sdfd", "asd", "sdsdfg", "asd", "asdd", "asfrt"];
-    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
-    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills);
+    var skills = ["JavaScript", "C#", "C#", "asp.net"];
+    var features = ["good something", "more of tha something", "good more something yes good", "cool new features and stuff", "new thing yes good!"];
+    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
+    createProject("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
 }
 
 
 
-function createProject(imageSrc, title, descripton, learned, skills){
+function createProject(imageSrc, title, descripton, learned, skills, features){
     var project = document.createElement("div");
     project.classList.add("project");
 
@@ -53,7 +54,7 @@ function createProject(imageSrc, title, descripton, learned, skills){
     var skillsDiv = document.createElement("div");
     skillsDiv.classList.add("skills");
     for(var i = 0; i < skills.length;i++){
-        var skill = document.createElement("li");
+        var skill = document.createElement("a");
         skill.innerHTML = skills[i];
         skillsDiv.appendChild(skill);
     }
@@ -86,7 +87,20 @@ function createProject(imageSrc, title, descripton, learned, skills){
     var descLearnedText = document.createElement("p");
     descLearnedText.innerHTML = learned;
     desc.appendChild(descLearnedText);
-    
+
+    var featuresDiv = document.createElement("div");
+    featuresDiv.classList.add("features");
+
+    var featureTitle = document.createElement("h3");
+    featureTitle.innerHTML = "Notable Features";
+    featuresDiv.appendChild(featureTitle);
+
+    for(var i = 0; i < features.length;i++){
+        var feature = document.createElement("li");
+        feature.innerHTML = features[i];
+        featuresDiv.appendChild(feature);
+    }
+    desc.appendChild(featuresDiv);
 
     //add to project
     project.appendChild(leftDiv);
