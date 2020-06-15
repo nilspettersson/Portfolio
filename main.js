@@ -5,11 +5,12 @@ window.onload = function(){
     var features = ["good something", "more of tha something", "good more something yes good", "cool new features and stuff", "new thing yes good!"];
 
     var modal = new Modal("first modal");
-    var project = new Project(modal, "projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    
+    var project = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
+    project.addModal(modal);
+
     var modal2 = new Modal("second modal");
-    var project2 = new Project(modal2, "projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    
+    var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
+    project2.demo.href = "https://stackoverflow.com/questions/9643311/pass-string-parameter-in-an-onclick-function";
 
 }
 
@@ -64,7 +65,7 @@ class Modal{
 
 
 class Project{
-    constructor(modal, imageSrc, title, descripton, learned, skills, features){
+    constructor(imageSrc, title, descripton, learned, skills, features){
         this.project = document.createElement("div");
         this.project.classList.add("project");
 
@@ -93,12 +94,14 @@ class Project{
         this.demo = document.createElement("a");
         this.demo.classList.add("button");
         this.demo.innerHTML = "View project";
+        this.demo.target = "_blank";
         leftDiv.appendChild(this.demo);
 
         var code = document.createElement("a");
         code.classList.add("button");
         code.innerHTML = "View code";
         code.href = "#";
+        this.demo.target = "_blank";
         leftDiv.appendChild(code);
 
         //skills
@@ -164,11 +167,15 @@ class Project{
         document.getElementById("second").appendChild(this.project);
 
 
+        
+    }
+
+    addModal(modal){
         //click events for modal
         this.demo.onclick = function(){
             modal.modal.style.display = "block";
         }
-    
+
         modal.close.onclick = function() {
             modal.modal.style.display = "none";
         }

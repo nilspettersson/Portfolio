@@ -32,11 +32,22 @@ li::before{
     transform: translateY(0.2em);
 }
 
+.link{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+}
+.link div{
+    margin-top: 4px;
+}
+
 .icon{
     width:40px;
 }
-.icon:hover{
+.link:hover{
     filter: brightness(0.6);
+    
 }
 
 img{
@@ -47,7 +58,7 @@ img{
     background-image: url('background.jpg');
     background-color: rgba(0, 0, 0, 0.66);
     background-blend-mode: darken;
-    padding:37.4vh 0px;
+    padding:33.5vh 0px;
     
     color: rgb(255, 255, 255);
     text-align: center;
@@ -57,7 +68,7 @@ img{
 }
 .header-button{
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 60px;
     text-decoration: none;
     background:#ac3b61 ;
     color: white;
@@ -182,7 +193,7 @@ img{
     font-size: 0.7em;
     padding: 8px 10px;
     margin-right: 8px;
-    background:rgb(219, 219, 219) ;
+    background:rgb(219, 219, 219);
     border-radius: 40%;
 }
 
@@ -196,15 +207,12 @@ img{
     color: white;
     border-radius: 40%;
     padding: 14px 14px;
-    box-shadow: 0px 0px 5px rgb(95, 95, 95);
     transition-property:background;
     
 }
 .button:hover{
     background:#7a2a45 ;
-    box-shadow: 0px 0px 0px rgb(97, 97, 97);
     transition-duration: 150ms;
-   
 }
 
 
@@ -249,3 +257,15 @@ img{
     text-decoration: none;
     cursor: pointer;
   }
+
+  .footer{
+      height: 200px;
+      text-align: center;
+      background: rgb(40, 40, 40);
+      color: white;
+
+  }
+  .footer h2{
+      padding-top: 30px;
+  }
+ 
