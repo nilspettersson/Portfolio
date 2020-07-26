@@ -1,12 +1,15 @@
 window.onload = function(){
-    var descripton = "This project makes it easy to do some stuff blablabla sad as das d as das d asd as da sd a  asdasdasd as d asd as dasd asd  as das dasd as sda das";
-    var learned = "from creating this project I learned how to do stuff and that will help me with stuff!";
-    var skills = ["JavaScript", "C#", "C#", "asp.net"];
-    var features = ["good something", "more of tha something", "good more something yes good", "cool new features and stuff", "new thing yes good!"];
+    var descripton = "Project manager lets you create projects and add sprints to those projects. Every sprint can contain tasks that should be competed during that sprint";
+    var learned = "This was my first time creating a C# web application so this project taught me how to program using the MVC design pattern";
+    var skills = ["html", "javaScript", "c#", "asp.net", "css"];
+    var features = ["Drag and drop tasks", "Roles, manager and developer", "Search and filter for finding projects"];
 
+    var project = new Project("projects/project_manager.JPG", "Project manager", descripton, learned, skills, features);
     var modal = new Modal("first modal");
-    var project = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
     project.addModal(modal);
+
+    project.code.href = "https://github.com/nilspettersson/Project_manager";
+
 
     var modal2 = new Modal("second modal");
     var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
@@ -97,12 +100,12 @@ class Project{
         this.demo.target = "_blank";
         leftDiv.appendChild(this.demo);
 
-        var code = document.createElement("a");
-        code.classList.add("button");
-        code.innerHTML = "View code";
-        code.href = "#";
-        this.demo.target = "_blank";
-        leftDiv.appendChild(code);
+         this.code = document.createElement("a");
+         this.code.classList.add("button");
+         this.code.innerHTML = "View code";
+         this.code.href = "#";
+        this.code.target = "_blank";
+        leftDiv.appendChild(this.code);
 
         //skills
         var skillsTitle = document.createElement("h3");
@@ -127,14 +130,11 @@ class Project{
         overviewTitle.innerHTML = "Overview";
         desc.appendChild(overviewTitle);
 
+        //text
         var overview = document.createElement("p");
         overview.innerHTML = descripton;
         desc.appendChild(overview);
 
-        //text
-        var descDesc = document.createElement("p");
-        descDesc.innerHTML = descripton;
-        desc.appendChild(descDesc);
 
         //learned
         var descLearned = document.createElement("h3");
