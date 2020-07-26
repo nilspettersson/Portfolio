@@ -5,10 +5,11 @@ window.onload = function(){
     var features = ["Drag and drop tasks", "Roles, manager and developer", "Search and filter for finding projects"];
 
     var project = new Project("projects/project_manager.JPG", "Project manager", descripton, learned, skills, features);
-    var modal = new Modal("first modal");
+    project.code.href = "https://github.com/nilspettersson/Project_manager";
+
+    var modal = new Modal("first modal", "projects/project_manager.JPG");
     project.addModal(modal);
 
-    project.code.href = "https://github.com/nilspettersson/Project_manager";
 
 
     var modal2 = new Modal("second modal");
@@ -43,7 +44,7 @@ window.smoothScroll = function(target) {
 }
 
 class Modal{
-    constructor(text){
+    constructor(text, images){
         this.modal = document.createElement("div");
         this.modal.classList.add("modal");
 
@@ -54,11 +55,23 @@ class Modal{
         this.close.classList.add("close");
         this.close.innerHTML = "&times;";
 
-        var p = document.createElement("p");
-        p.innerHTML = text;
+        //image
+        var imageDiv = document.createElement("div");
+        imageDiv.classList.add("image");
+
+        var img = document.createElement("img");
+        img.src = images;
+        imageDiv.appendChild(img);
+
+        
+       /*var p = document.createElement("p");
+        p.innerHTML = text;*/
 
         modalContent.appendChild(this.close);
-        modalContent.appendChild(p);
+        //modalContent.appendChild(p);
+
+        modalContent.appendChild(imageDiv);
+
         
         this.modal.appendChild(modalContent);
 
