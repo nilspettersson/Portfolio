@@ -12,9 +12,9 @@ window.onload = function(){
 
 
 
-    var modal2 = new Modal("second modal");
-    var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    project2.demo.href = "https://stackoverflow.com/questions/9643311/pass-string-parameter-in-an-onclick-function";
+    //var modal2 = new Modal("second modal");
+    //var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
+    //project2.demo.href = "https://stackoverflow.com/questions/9643311/pass-string-parameter-in-an-onclick-function";
 
 }
 
@@ -59,9 +59,88 @@ class Modal{
         var imageDiv = document.createElement("div");
         imageDiv.classList.add("image");
 
-        var img = document.createElement("img");
+        /*var img = document.createElement("img");
         img.src = images;
-        imageDiv.appendChild(img);
+        imageDiv.appendChild(img);*/
+
+
+        var container = document.createElement("div");
+        container.classList.add("slideshow-container");
+
+        for(var i = 0; i < 3; i++){
+            var div = document.createElement("div");
+            div.classList.add("mySlides");
+            div.classList.add("fade");
+
+            var numberText = document.createElement("div");
+            numberText.classList.add("numbertext");
+            numberText.innerHTML = (i+1)+" / 3";
+            
+            var img = document.createElement("img");
+            img.src = "projects/project_manager.JPG";
+
+            var captionText = document.createElement("div");
+            captionText.classList.add("text");
+            captionText.innerHTML = "Caption Text" + i;
+
+            div.appendChild(numberText);
+            div.appendChild(img);
+            div.appendChild(captionText);
+
+            container.appendChild(div);
+        }
+        var prev = document.createElement("a");
+        prev.id = "prev";
+        prev.classList.add("prev");
+        //prev.onclick = plusSlides(-1);
+        prev.innerHTML = "&#10094";
+        
+        var next = document.createElement("a");
+        next.id = "next";
+        next.classList.add("next");
+        //next.onclick = plusSlides(1);
+        next.innerHTML = "&#10095";
+
+        container.appendChild(prev);
+        container.appendChild(next);
+
+        imageDiv.appendChild(container);
+
+        
+
+/*
+        <div class="slideshow-container">
+        
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="projects/project_manager.JPG" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="projects/project_manager.JPG" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="projects/project_manager.JPG" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+*/     
+
 
         
        /*var p = document.createElement("p");
@@ -76,6 +155,11 @@ class Modal{
         this.modal.appendChild(modalContent);
 
         document.body.appendChild(this.modal);
+        
+        console.log("click");
+        document.getElementsByClassName("prev")[0].addEventListener('click', function(){plusSlides(-1);}, false);
+        document.getElementsByClassName("next")[0].addEventListener('click', function(){plusSlides(1);}, false);
+
     }
 }
 
@@ -193,4 +277,46 @@ class Project{
             modal.modal.style.display = "none";
         }
     }
+}
+
+
+
+
+
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+    }
+    console.log(slideIndex);
+    slides[slideIndex-1].style.display = "block";
+    //dots[slideIndex-1].className += " active";
 }
