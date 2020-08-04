@@ -106,7 +106,15 @@ class Modal{
 
         imageDiv.appendChild(container);
 
-        
+        var dots = document.createElement("div");
+        dots.style.textAlign = "center";
+        for(var i = 0; i < 3; i++){
+            var dot = document.createElement("span");
+            dot.classList.add("dot");
+            dot.id = i+1;
+            dots.appendChild(dot);
+        }
+        imageDiv.appendChild(dots);
 
 /*
         <div class="slideshow-container">
@@ -159,6 +167,11 @@ class Modal{
         console.log("click");
         document.getElementsByClassName("prev")[0].addEventListener('click', function(){plusSlides(-1);}, false);
         document.getElementsByClassName("next")[0].addEventListener('click', function(){plusSlides(1);}, false);
+
+        for(var i = 0; i < document.getElementsByClassName("dot").length; i++){
+            document.getElementsByClassName("dot")[i].addEventListener('click', function(){currentSlide(this.id);}, false);
+        }
+        
 
     }
 }
@@ -318,5 +331,5 @@ function showSlides(n) {
     }
     console.log(slideIndex);
     slides[slideIndex-1].style.display = "block";
-    //dots[slideIndex-1].className += " active";
+    dots[slideIndex-1].className += " active";
 }
