@@ -1,4 +1,8 @@
+var index;
+
 window.onload = function(){
+    index = 0;
+
     var descripton = "Project manager lets you create projects and add sprints to those projects. Every sprint can contain tasks that should be competed during that sprint";
     var learned = "This was my first time creating a C# web application so this project taught me how to program using the MVC design pattern";
     var skills = ["html", "javaScript", "c#", "asp.net", "css"];
@@ -11,11 +15,11 @@ window.onload = function(){
     project.addModal(modal);
 
 
+    index++;
 
-    //var modal2 = new Modal("second modal");
-    //var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    //project2.demo.href = "https://stackoverflow.com/questions/9643311/pass-string-parameter-in-an-onclick-function";
-
+    var modal2 = new Modal("second modal");
+    var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
+    project2.addModal(modal);
 }
 
 
@@ -71,6 +75,7 @@ class Modal{
             var div = document.createElement("div");
             div.classList.add("mySlides");
             div.classList.add("fade");
+            div.classList.add("slideIndex" + index);
 
             var numberText = document.createElement("div");
             numberText.classList.add("numbertext");
@@ -164,9 +169,9 @@ class Modal{
 
         document.body.appendChild(this.modal);
         
-        console.log("click");
-        document.getElementsByClassName("prev")[0].addEventListener('click', function(){plusSlides(-1);}, false);
-        document.getElementsByClassName("next")[0].addEventListener('click', function(){plusSlides(1);}, false);
+        var tempIndex = index;
+        document.getElementsByClassName("prev")[0].addEventListener('click', function(){plusSlides(-1, "slideIndex" + tempIndex);}, false);
+        document.getElementsByClassName("next")[0].addEventListener('click', function(){plusSlides(1, "slideIndex" + tempIndex);}, false);
 
         for(var i = 0; i < document.getElementsByClassName("dot").length; i++){
             document.getElementsByClassName("dot")[i].addEventListener('click', function(){currentSlide(this.id);}, false);
@@ -304,8 +309,8 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n, slide) {
+    showSlides(slideIndex += n, slide);
 }
 
 // Thumbnail image controls
@@ -313,10 +318,11 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n, slide) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName(slide);
     var dots = document.getElementsByClassName("dot");
+    console.log(slides)
     if (n > slides.length) {
       slideIndex = 1;
     }
