@@ -11,15 +11,18 @@ window.onload = function(){
     var project = new Project("projects/project_manager.JPG", "Project manager", descripton, learned, skills, features);
     project.code.href = "https://github.com/nilspettersson/Project_manager";
 
-    var modal = new Modal("first modal", "projects/project_manager.JPG");
+    
+    var images1 = ["projects/project_manager.JPG", "projects/project_manager.JPG", "projects/project_manager.JPG"];
+    var modal = new Modal("first modal", images1);
     project.addModal(modal);
 
 
     index++;
 
-    var modal2 = new Modal("second modal");
+    var images2 = ["projects/test.jpeg", "projects/test.jpeg", "projects/test.jpeg"];
+    var modal2 = new Modal("second modal", images2);
     var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    project2.addModal(modal);
+    project2.addModal(modal2);
 }
 
 
@@ -59,19 +62,14 @@ class Modal{
         this.close.classList.add("close");
         this.close.innerHTML = "&times;";
 
-        //image
+        //images
         var imageDiv = document.createElement("div");
         imageDiv.classList.add("image");
-
-        /*var img = document.createElement("img");
-        img.src = images;
-        imageDiv.appendChild(img);*/
-
 
         var container = document.createElement("div");
         container.classList.add("slideshow-container");
 
-        for(var i = 0; i < 3; i++){
+        for(var i = 0; i < images.length; i++){
             var div = document.createElement("div");
             div.classList.add("mySlides");
             div.classList.add("fade");
@@ -82,7 +80,7 @@ class Modal{
             numberText.innerHTML = (i+1)+" / 3";
             
             var img = document.createElement("img");
-            img.src = "projects/project_manager.JPG";
+            img.src = images[i];
 
             var captionText = document.createElement("div");
             captionText.classList.add("text");
@@ -95,13 +93,13 @@ class Modal{
             container.appendChild(div);
         }
         var prev = document.createElement("a");
-        prev.id = "prev";
+        prev.id = "prev" + index;
         prev.classList.add("prev");
         //prev.onclick = plusSlides(-1);
         prev.innerHTML = "&#10094";
         
         var next = document.createElement("a");
-        next.id = "next";
+        next.id = "next" + index;
         next.classList.add("next");
         //next.onclick = plusSlides(1);
         next.innerHTML = "&#10095";
@@ -116,6 +114,7 @@ class Modal{
         for(var i = 0; i < 3; i++){
             var dot = document.createElement("span");
             dot.classList.add("dot");
+            dot.classList.add("dot" + index);
             dot.id = i+1;
             dots.appendChild(dot);
         }
@@ -170,11 +169,11 @@ class Modal{
         document.body.appendChild(this.modal);
         
         var tempIndex = index;
-        document.getElementsByClassName("prev")[0].addEventListener('click', function(){plusSlides(-1, "slideIndex" + tempIndex);}, false);
-        document.getElementsByClassName("next")[0].addEventListener('click', function(){plusSlides(1, "slideIndex" + tempIndex);}, false);
-
+        document.getElementsByClassName("prev")[tempIndex].addEventListener('click', function(){plusSlides(-1, "slideIndex" + tempIndex, tempIndex);}, false);
+        document.getElementsByClassName("next")[tempIndex].addEventListener('click', function(){plusSlides(1, "slideIndex" + tempIndex, tempIndex);}, false);
+        console.log(document.getElementsByClassName("dot" + index).length);
         for(var i = 0; i < document.getElementsByClassName("dot").length; i++){
-            document.getElementsByClassName("dot")[i].addEventListener('click', function(){currentSlide(this.id);}, false);
+            document.getElementsByClassName("dot")[i].addEventListener('click', function(){currentSlide(this.id, "slideIndex" + tempIndex, tempIndex);}, false);
         }
         
 
@@ -309,19 +308,19 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n, slide) {
-    showSlides(slideIndex += n, slide);
+function plusSlides(n, slide, index) {
+    showSlides(slideIndex += n, slide, index);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, slide, index) {
+  showSlides(slideIndex = n, slide, index);
 }
 
-function showSlides(n, slide) {
+function showSlides(n, slide, index) {
     var i;
     var slides = document.getElementsByClassName(slide);
-    var dots = document.getElementsByClassName("dot");
+    var dots = document.getElementsByClassName("dot" + index);
     console.log(slides)
     if (n > slides.length) {
       slideIndex = 1;
@@ -335,7 +334,6 @@ function showSlides(n, slide) {
     for (i = 0; i < dots.length; i++) {
        dots[i].className = dots[i].className.replace(" active", "");
     }
-    console.log(slideIndex);
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
