@@ -19,7 +19,7 @@ window.onload = function(){
 
     index++;
 
-    var images2 = ["projects/test.jpeg", "projects/test.jpeg", "projects/test.jpeg"];
+    var images2 = ["projects/test.jpeg", "projects/project_manager.JPG", "projects/test.jpeg"];
     var modal2 = new Modal("second modal", images2);
     var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
     project2.addModal(modal2);
@@ -74,6 +74,9 @@ class Modal{
             div.classList.add("mySlides");
             div.classList.add("fade");
             div.classList.add("slideIndex" + index);
+            if(i == 0){
+                div.style.display = "block";
+            }
 
             var numberText = document.createElement("div");
             numberText.classList.add("numbertext");
@@ -95,13 +98,11 @@ class Modal{
         var prev = document.createElement("a");
         prev.id = "prev" + index;
         prev.classList.add("prev");
-        //prev.onclick = plusSlides(-1);
         prev.innerHTML = "&#10094";
         
         var next = document.createElement("a");
         next.id = "next" + index;
         next.classList.add("next");
-        //next.onclick = plusSlides(1);
         next.innerHTML = "&#10095";
 
         container.appendChild(prev);
@@ -120,46 +121,8 @@ class Modal{
         }
         imageDiv.appendChild(dots);
 
-/*
-        <div class="slideshow-container">
-        
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="projects/project_manager.JPG" style="width:100%">
-              <div class="text">Caption Text</div>
-            </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="projects/project_manager.JPG" style="width:100%">
-              <div class="text">Caption Two</div>
-            </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="projects/project_manager.JPG" style="width:100%">
-              <div class="text">Caption Three</div>
-            </div>
-          
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-          <br>
-          
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-*/     
-
-
-        
-       /*var p = document.createElement("p");
-        p.innerHTML = text;*/
 
         modalContent.appendChild(this.close);
-        //modalContent.appendChild(p);
 
         modalContent.appendChild(imageDiv);
 
