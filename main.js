@@ -8,21 +8,16 @@ window.onload = function(){
     var skills = ["html", "javaScript", "c#", "asp.net", "css"];
     var features = ["Drag and drop tasks", "Roles, manager and developer", "Search and filter for finding projects"];
 
-    var project = new Project("projects/project_manager.JPG", "Project manager", descripton, learned, skills, features);
+    var project = new Project("projects/projectManager/one.JPG", "Project manager", descripton, learned, skills, features);
     project.code.href = "https://github.com/nilspettersson/Project_manager";
 
     
-    var images1 = ["projects/project_manager.JPG", "projects/project_manager.JPG", "projects/project_manager.JPG"];
+    var images1 = ["projects/projectManager/one.JPG", "projects/projectManager/two.JPG"];
     var modal = new Modal("first modal", images1);
     project.addModal(modal);
 
 
     index++;
-
-    var images2 = ["projects/test.jpeg", "projects/project_manager.JPG"];
-    var modal2 = new Modal("second modal", images2);
-    var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
-    project2.addModal(modal2);
 }
 
 
@@ -138,7 +133,6 @@ class Modal{
         for(var i = 0; i < document.getElementsByClassName("dot").length; i++){
             document.getElementsByClassName("dot")[i].addEventListener('click', function(){currentSlide(this.id, "slideIndex" + tempIndex, tempIndex);}, false);
         }
-        
 
     }
 }
@@ -242,9 +236,6 @@ class Project{
         
         
         document.getElementById("second").appendChild(this.project);
-
-
-        
     }
 
     addModal(modal){
@@ -260,22 +251,13 @@ class Project{
 }
 
 
-
-
-
-
-
-
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n, slide, index) {
     showSlides(slideIndex += n, slide, index);
 }
 
-// Thumbnail image controls
 function currentSlide(n, slide, index) {
   showSlides(slideIndex = n, slide, index);
 }
@@ -284,7 +266,7 @@ function showSlides(n, slide, index) {
     var i;
     var slides = document.getElementsByClassName(slide);
     var dots = document.getElementsByClassName("dot" + index);
-    console.log(slides)
+    
     if (n > slides.length) {
       slideIndex = 1;
     }

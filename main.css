@@ -54,6 +54,10 @@ img{
     width: 80%;
 }
 
+.mySlides img{
+    width:100%;
+}
+
 .header{
     background-image: url('background.jpg');
     background-color: rgba(0, 0, 0, 0.66);
@@ -245,6 +249,8 @@ img{
   
   /* The Close Button */
   .close {
+    position: relative;
+    z-index: 4;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -296,7 +302,7 @@ img{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  /*max-width: 1000px;*/
   position: relative;
   margin: auto;
 }
