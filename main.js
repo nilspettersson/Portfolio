@@ -19,7 +19,7 @@ window.onload = function(){
 
     index++;
 
-    var images2 = ["projects/test.jpeg", "projects/project_manager.JPG", "projects/test.jpeg"];
+    var images2 = ["projects/test.jpeg", "projects/project_manager.JPG"];
     var modal2 = new Modal("second modal", images2);
     var project2 = new Project("projects/test.jpeg", "Project manager", descripton, learned, skills, features);
     project2.addModal(modal2);
@@ -112,7 +112,7 @@ class Modal{
 
         var dots = document.createElement("div");
         dots.style.textAlign = "center";
-        for(var i = 0; i < 3; i++){
+        for(var i = 0; i < images.length; i++){
             var dot = document.createElement("span");
             dot.classList.add("dot");
             dot.classList.add("dot" + index);
