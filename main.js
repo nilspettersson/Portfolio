@@ -4,16 +4,17 @@ window.onload = function(){
     index = 0;
 
     var descripton = "Project manager lets you create projects and add sprints to those projects. Every sprint can contain tasks that should be competed during that sprint";
-    var learned = "This was my first time creating a C# web application so this project taught me how to program using the MVC design pattern";
+    var learned = "This project taught me how to program using the MVC design pattern.";
     var skills = ["html", "javaScript", "c#", "asp.net", "css"];
     var features = ["Drag and drop tasks", "Roles, manager and developer", "Search and filter for finding projects"];
 
     var project = new Project("projects/projectManager/one.JPG", "Project manager", descripton, learned, skills, features);
     project.code.href = "https://github.com/nilspettersson/Project_manager";
 
-    
     var images1 = ["projects/projectManager/one.JPG", "projects/projectManager/two.JPG"];
-    var modal = new Modal("first modal", images1);
+    var captions = ["This page is used to add tasks and removed tasks from the active sprint. tasks with a red color is a bug, green is a feature. blue is an investigation",
+     "This page shows all projects you are working on. You can search for projects and change filter to only show projects you own"];
+    var modal = new Modal("first modal", images1, captions);
     project.addModal(modal);
 
 
@@ -46,7 +47,7 @@ window.smoothScroll = function(target) {
 }
 
 class Modal{
-    constructor(text, images){
+    constructor(text, images, captions){
         this.modal = document.createElement("div");
         this.modal.classList.add("modal");
 
@@ -82,7 +83,7 @@ class Modal{
 
             var captionText = document.createElement("div");
             captionText.classList.add("text");
-            captionText.innerHTML = "Caption Text" + i;
+            captionText.innerHTML = captions[i];
 
             div.appendChild(numberText);
             div.appendChild(img);
@@ -209,7 +210,7 @@ class Project{
 
         //learned
         var descLearned = document.createElement("h3");
-        descLearned.innerHTML = "What I learned";
+        descLearned.innerHTML = "What I have learned";
         desc.appendChild(descLearned);
 
         var descLearnedText = document.createElement("p");
@@ -220,7 +221,7 @@ class Project{
         featuresDiv.classList.add("features");
 
         var featureTitle = document.createElement("h3");
-        featureTitle.innerHTML = "Notable Features";
+        featureTitle.innerHTML = "Notable features";
         featuresDiv.appendChild(featureTitle);
 
         for(var i = 0; i < features.length;i++){
