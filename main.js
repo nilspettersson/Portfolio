@@ -16,7 +16,7 @@ window.onload = function(){
     "projects/projectManager/three.JPG"];
     var captions = ["This page is used to add tasks and removed tasks from the active sprint. tasks with a red color is a bug, green is a feature. blue is an investigation",
      "This page shows all projects you are working on. You can search for projects and change filter to only show projects you own",
-    "new"];
+    "This page shows all sprints in the selected project. It shows when it starts, ends and if it is done."];
     var modal = new Modal("first modal", images1, captions);
     project.addModal(modal);
 
