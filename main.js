@@ -11,9 +11,12 @@ window.onload = function(){
     var project = new Project("projects/projectManager/one.JPG", "Project manager", descripton, learned, skills, features);
     project.code.href = "https://github.com/nilspettersson/Project_manager";
 
-    var images1 = ["projects/projectManager/one.JPG", "projects/projectManager/two.JPG"];
+    var images1 = ["projects/projectManager/one.JPG", 
+    "projects/projectManager/two.JPG",
+    "projects/projectManager/three.JPG"];
     var captions = ["This page is used to add tasks and removed tasks from the active sprint. tasks with a red color is a bug, green is a feature. blue is an investigation",
-     "This page shows all projects you are working on. You can search for projects and change filter to only show projects you own"];
+     "This page shows all projects you are working on. You can search for projects and change filter to only show projects you own",
+    "new"];
     var modal = new Modal("first modal", images1, captions);
     project.addModal(modal);
 
