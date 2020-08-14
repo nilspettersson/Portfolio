@@ -79,7 +79,7 @@ class Modal{
 
             var numberText = document.createElement("div");
             numberText.classList.add("numbertext");
-            numberText.innerHTML = (i+1)+" / 3";
+            numberText.innerHTML = (i+1) + " / " + images.length;
             
             var img = document.createElement("img");
             img.src = images[i];
