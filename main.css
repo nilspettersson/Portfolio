@@ -119,20 +119,6 @@ img{
 
 }
 
-@media only screen and (max-width: 780px){
-    .project{
-        grid-template-columns: 1fr;
-    }
-    .grid{
-        padding: 0px 20px;
-    }
-}
-@media only screen and (min-width: 1400px){
-    .grid{
-        padding: 0px 16%;
-    }
-}
-
 .project h1, h3{
     line-height: 40px;
 }
@@ -299,6 +285,7 @@ img{
 /* Hide the images by default */
 .mySlides {
   display: none;
+  margin-bottom: 40px;
 }
 
 /* Next & previous buttons */
@@ -383,4 +370,22 @@ img{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 780px){
+    .project{
+        grid-template-columns: 1fr;
+    }
+    .grid{
+        padding: 0px 20px;
+    }
+    .mySlides {
+        margin-bottom: 200px;
+      }
+}
+@media only screen and (min-width: 1400px){
+    .grid{
+        padding: 0px 16%;
+    }
 }
