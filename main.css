@@ -251,7 +251,7 @@ img{
   }
 
   .footer{
-      height: 200px;
+      padding-bottom: 20px;
       text-align: center;
       background: rgb(40, 40, 40);
       color: white;
@@ -260,7 +260,53 @@ img{
   .footer h2{
       padding-top: 30px;
   }
- 
+
+  .email{
+    display: block;
+    padding: 6px;
+  }
+  input:focus{
+    border:2px solid rgb(59, 134, 172);
+    outline: none !important;
+    box-shadow: 0 0 4px rgb(59, 134, 172);
+  }
+
+  textarea{
+    padding: 8px;
+    width:300px
+  }
+  textarea:focus{
+    border:1px solid rgb(59, 134, 172);
+    outline: none !important;
+    box-shadow: 0 0 4px rgb(59, 134, 172);
+}
+
+
+  input[type=text]{
+    /*border:none;*/
+    padding: 8px;
+    width:300px
+  }
+  input[type=email]{
+    /*border:none;*/
+    padding: 8px;
+    width:300px
+  }
+
+  .email-send{
+    border: none;
+    text-decoration: none;
+    background:#ac3b61 ;
+    color: white;
+    border-radius: 40%;
+    padding: 14px 14px;
+    transition-property:background;
+  }
+  .email-send:hover{
+    background:#7a2a45 ;
+    transition-duration: 200ms;
+   
+  }
 
 
   * {box-sizing:border-box}
