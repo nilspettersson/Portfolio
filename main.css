@@ -51,7 +51,7 @@ li::before{
 }
 
 img{
-    width: 80%;
+    width: 90%;
 }
 
 .mySlides img{
@@ -95,7 +95,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background:rgb(255, 255, 255);
-    padding: 0px 10%;
+    padding: 0px 4%;
 }
 
 .about{
@@ -230,6 +230,7 @@ img{
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 4px;
     width: 80%;
   }
   
@@ -410,7 +411,7 @@ img{
 }
 
 
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 920px){
     .project{
         grid-template-columns: 1fr;
     }
@@ -419,10 +420,17 @@ img{
     }
     .mySlides {
         margin-bottom: 200px;
-      }
+    }
+    .modal-content {
+      padding: 10px;
+      width: 96%;
+    }
+    .mySlides {
+      margin-bottom: 40px;
+    }
 }
 @media only screen and (min-width: 1400px){
     .grid{
-        padding: 0px 16%;
+        padding: 0px 14%;
     }
 }
