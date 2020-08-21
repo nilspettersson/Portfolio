@@ -37,7 +37,7 @@
                 </p>
             </div>
 
-            <div class="main-header">
+            <div id="projects" class="main-header">
                 <h1>Projects</h1>
             </div>
         </div>
@@ -46,20 +46,29 @@
 
     <div class="footer">
         <h2>Contact</h2>
-        
 
-        <form action="https://formspree.io/mbjzeolb" method="POST">
-            <label class="email">
-                <input type="email" name="_replyto" placeholder="Your Mail">
-            </label>
-            <label class="email">
-                <textarea rows="6" name="message" placeholder=" Your Message"></textarea>
-            </label>
-            <input class="email-send" type="submit" value="Send">
-        </form>
+        <div class="form">
+            <form action="https://formspree.io/mbjzeolb" method="POST">
+                <label class="email">
+                    <input type="email" name="_replyto" placeholder="Your Mail">
+                </label>
+                <label class="email">
+                    <textarea rows="6" name="message" placeholder=" Your Message"></textarea>
+                </label>
+                <input class="email-send" type="submit" value="Send">
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="footer-back">
+        <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('body'))">HOME</a>
+        <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('second'))">ABOUT</a>
+        <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('projects'))">PORTFOLIO</a>
 
 
     </div>
+    
     
 
 </body>

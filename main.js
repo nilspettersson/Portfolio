@@ -13,17 +13,18 @@ window.onload = function(){
 
     var images1 = ["projects/projectManager/one.JPG", 
     "projects/projectManager/two.JPG",
-    "projects/projectManager/three.JPG"];
-    var captions = ["This page is used to add tasks and removed tasks from the active sprint. tasks with a red color is a bug, green is a feature. blue is an investigation",
+    "projects/projectManager/three.JPG", 
+    "projects/projectManager/four.JPG"];
+    var captions = ["This page is used to add tasks and removed tasks from the active sprint. Tasks with a red color is a bug, green is a feature and blue is an investigation. Every role can change state of tasks.",
      "This page shows all projects you are working on. You can search for projects and change filter to only show projects you own",
-    "This page shows all sprints in the selected project. It shows when it starts, ends and if it is done."];
+    "This page shows all sprints in the selected project. It shows when it starts, ends and if it is done.",
+    "You can add task with a title, description, type and difficulty. Managers and owner can add tasks"];
     var modal = new Modal("first modal", images1, captions);
     project.addModal(modal);
 
 
     index++;
-
-
+    
     
 }
 
