@@ -258,21 +258,35 @@ img{
     cursor: pointer;
   }
 
-  .footer{
-      padding-bottom: 40px;
-      text-align: center;
-      background: rgb(40, 40, 40);
-      color: white;
+  .contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    padding-bottom: 40px;
+
+    padding-left:4%;
+    padding-right:4%;
+
+    background: rgb(255, 255, 255);
+    color: rgb(70, 70, 70);
 
   }
-  .footer h2{
+
+  .contact-text{
+    padding:0px 20px;
+  }
+
+
+  .contact h2{
       padding-top: 30px;
   }
 
 
   .form{
-    margin: auto;
-    width: 400px;
+    background: rgb(255, 255, 255);
+    padding:0px 20px;
+    width: 100%;
+    max-width: 600px;
   }
 
   .email{
@@ -280,14 +294,12 @@ img{
     padding: 6px;
   }
   input:focus{
-    border:2px solid rgb(59, 134, 172);
+    border:none;
     outline: none !important;
-    box-shadow: 0 0 4px rgb(59, 134, 172);
-    transition-duration: 240ms;
   }
 
   textarea{
-    padding: 8px;
+    padding: 12px 8px;
     width:100%
   }
   textarea:focus{
@@ -300,9 +312,16 @@ img{
 
 
   input[type=email]{
-    border: none;
+    border:solid gray 1px;
+    border-radius: 2px;
+    padding: 12px 8px;
+    width:100%
+  }
+  input[type=email]:focus{
+    transition-duration: 240ms;
+    border:1px solid rgb(59, 134, 172);
+    box-shadow: 0 0 4px rgb(59, 134, 172);
     border-radius: 3px;
-    padding: 8px;
     width:100%
   }
 
@@ -310,7 +329,7 @@ img{
     display: block;
     border: none;
     text-decoration: none;
-    background:#ac3b61 ;
+    background:rgb(59, 134, 172);
     color: white;
     border-radius: 40%;
     padding: 10px 20px;
@@ -318,7 +337,7 @@ img{
     transition-property:background;
   }
   .email-send:hover{
-    background:#7a2a45 ;
+    background:rgb(36, 82, 105);
     transition-duration: 200ms;
    
   }
@@ -459,9 +478,16 @@ img{
     .mySlides {
       margin-bottom: 70px;
     }
+    .contact{
+      grid-template-columns: 1fr;
+    }
 }
 @media only screen and (min-width: 1400px){
     .grid{
         padding: 0px 14%;
+    }
+    .contact{
+      padding-left:14%;
+      padding-right:14%;
     }
 }
