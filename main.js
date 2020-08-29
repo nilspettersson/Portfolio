@@ -3,12 +3,12 @@ var index;
 window.onload = function(){
     index = 0;
 
-    var descripton = "Project manager lets you create projects and add sprints to those projects. Every sprint can contain tasks that should be competed during that sprint";
+    var description = "Project manager lets you create projects and add sprints to those projects. Every sprint can contain tasks that should be competed during that sprint";
     var learned = "This project taught me how to program using the MVC design pattern.";
     var skills = ["html", "javaScript", "c#", "asp.net", "css"];
     var features = ["Drag and drop tasks", "Roles, manager and developer", "Search and filter for finding projects"];
 
-    var project = new Project("projects/projectManager/one.JPG", "Project manager", descripton, learned, skills, features);
+    var project = new Project("projects/projectManager/one.JPG", "Project manager", description, learned, skills, features);
     project.code.href = "https://github.com/nilspettersson/Project_manager";
 
     var images1 = ["projects/projectManager/one.JPG", 
@@ -24,7 +24,16 @@ window.onload = function(){
 
 
     index++;
-    
+
+
+    var description2 = "Sudoku solver Can generate sudoku puzzles that the user can solve. It can also solve sudoku puzzles that the user creates or generates.";
+    var learned2 = "From working on this project I have learned about backtracking and how to use it.";
+    var skills2 = ["javaScript", "html", "css"];
+    var features2 = ["Puzzle generation with only one solution"];
+
+    var project2 = new Project("projects/sudoku/img1.JPG", "Sudoku solver", description2, learned2, skills2, features2);
+    project2.code.href = "https://github.com/nilspettersson/sudoku_solver";
+    project2.demo.href = "https://nilspettersson.github.io/sudoku_solver/";
     
 }
 
