@@ -109,10 +109,11 @@ img{
     grid-column-start: 1;
     grid-column-end: 3;
     padding: 20px 40px;
+    text-align: center;
 }
 
 .project{
-    border-bottom: solid 2px rgba(0, 0, 0, 0.199);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.171);
     background:rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 3;
@@ -137,9 +138,10 @@ img{
     text-align: center;
 }
 .main-header h1{
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0px;
     margin-top: 60px;
+    font-size: 40px;
 }
 
 .project-left{
@@ -303,6 +305,7 @@ img{
   }
 
   textarea{
+    border:solid rgba(128, 128, 128, 0.726) 1px;
     padding: 12px 8px;
     width:100%
   }
@@ -316,7 +319,7 @@ img{
 
 
   input[type=email]{
-    border:solid gray 1px;
+    border:solid rgba(128, 128, 128, 0.726) 1px;
     border-radius: 2px;
     padding: 12px 8px;
     width:100%
