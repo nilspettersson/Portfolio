@@ -43,14 +43,15 @@ li::before{
     display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 0px;
+    margin: 40px 14px;
 }
 .link div{
     margin-top: 4px;
 }
 
 .icon{
-    width:40px;
+  width:40px;
+  filter: invert();
 }
 .link:hover{
     filter: brightness(0.6);
