@@ -127,7 +127,10 @@ img{
 }
 
 .project h1, h3{
-    line-height: 30px;
+    line-height: 4px;
+}
+.project p{
+  margin-bottom: 60px;
 }
 
 .main-header{
@@ -148,6 +151,7 @@ img{
     background: rgb(255, 255, 255);
 }
 .project-left img{
+  margin-top: 16px;
     border: solid 6px rgb(49, 49, 49);
     border-radius: 3px;
     box-shadow: 1px 3px 8px rgba(46, 46, 46, 0.575);
@@ -158,9 +162,10 @@ img{
 
 
 .project-desc{
-    text-align: left;
-    padding-left: 16px;
-    color:rgb(40, 40, 40);
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 16px;
+  color:rgb(40, 40, 40);
 }
 
 .project-desc h3{
