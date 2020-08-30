@@ -108,8 +108,7 @@ img{
 .about{
     grid-column-start: 1;
     grid-column-end: 3;
-    padding: 20px 0px;
-    text-align: center;
+    padding: 20px 40px;
 }
 
 .project{
@@ -117,13 +116,11 @@ img{
     background:rgb(255, 255, 255);
     grid-column-start: 1;
     grid-column-end: 3;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    margin-top: 0px;
-    padding: 30px 0px 80px 0px;
-
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 30px 0px 40px 0px;
 }
 
 .project h1, h3{
@@ -141,9 +138,8 @@ img{
 }
 .main-header h1{
     display: inline-block;
-    border-bottom: solid 3px rgb(60, 60, 60);
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .project-left{
