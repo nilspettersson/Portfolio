@@ -8,7 +8,60 @@ body{
 }
 
 h1{
-    font-weight: 800;
+    font-weight: 700;
+}
+
+.logo{
+  padding: 28px 0px;
+  position: relative;
+  text-align: left;
+  margin-left: 40px;
+  width: 300px;
+}
+.logo h1{
+  font-size: 44px;
+  display: inline-block;
+  margin: 0px;
+
+  padding: 0px;
+}
+.logo img{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  width: 74px;
+  left: 68px;
+  top: 22px;
+  display: inline-block;
+}
+
+.header{
+  background-color: #181818;
+  background-blend-mode: darken;
+  padding:0px 0px;
+  
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.header h3{
+    color: rgb(255, 255, 255);
+}
+.header-button{
+    display: inline-block;
+    margin-top: 60px;
+    text-decoration: none;
+    background:#ac3b61 ;
+    color: white;
+    border-radius: 40%;
+    padding: 14px 14px;
+    transition-property:background;
+    
+}
+.header-button:hover{
+    background:#7a2a45 ;
+    transition-duration: 200ms;
+   
 }
 
 .header-content h1{
@@ -66,34 +119,6 @@ img{
     width:100%;
 }
 
-.header{
-    background-image: url('background.jpg');
-    background-color: rgba(0, 0, 0, 0.66);
-    background-blend-mode: darken;
-    padding:33.5vh 0px;
-    
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-.header h3{
-    color: rgb(255, 255, 255);
-}
-.header-button{
-    display: inline-block;
-    margin-top: 60px;
-    text-decoration: none;
-    background:#ac3b61 ;
-    color: white;
-    border-radius: 40%;
-    padding: 14px 14px;
-    transition-property:background;
-    
-}
-.header-button:hover{
-    background:#7a2a45 ;
-    transition-duration: 200ms;
-   
-}
 
 .space{
     margin: 20px;
