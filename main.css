@@ -7,49 +7,52 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-h1{
-    font-weight: 700;
-}
 
-.nav{
-  text-align: left;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo{
-  display: inline-block;
-  padding: 28px 0px;
-  position: relative;
-  text-align: left;
-  margin-left: 40px;
-  width: 300px;
+  display: flex;
+  margin-left: 60px;
 }
 .logo h1{
-  font-weight: bolder;
-  font-size: 44px;
-  display: inline-block;
-  margin: 0px;
-
-  padding: 0px;
+  font-size: 48px;
+  font-weight: 800;
 }
 .logo img{
-  position: absolute;
-  margin: 0px;
-  padding: 0px;
-  width: 74px;
-  left: 68px;
-  top: 22px;
-  display: inline-block;
+  width: 80px;
 }
 
-.menu{
-  display: inline-block;
+nav{
+  margin-right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.menu a{
-  padding: 20px;
+
+a{
+  margin: 0px 28px;
+  font-weight: lighter;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 100;
-  font-size: 18px;
-  color: white;
+  color: rgb(226, 226, 226);
+}
+a:hover{
+  transition: 200ms;
+  color: #7c7c7c;
+}
+
+.icon{
+  width:30px;
+  display: inline-block;
+  filter: invert();
+}
+
+.link:hover{
+    filter: brightness(0.6);
 }
 
 
@@ -110,24 +113,7 @@ li::before{
     transform: translateY(0.2em);
 }
 
-.link{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 40px 14px;
-}
-.link div{
-    margin-top: 4px;
-}
 
-.icon{
-  width:40px;
-  filter: invert();
-}
-.link:hover{
-    filter: brightness(0.6);
-    
-}
 
 img{
     width: 90%;
