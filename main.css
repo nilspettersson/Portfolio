@@ -33,7 +33,7 @@ nav{
   align-items: center;
 }
 
-a{
+nav a{
   margin: 0px 28px;
   font-weight: lighter;
   font-size: 20px;
@@ -58,39 +58,54 @@ a:hover{
 
 .header{
   background-color: #181818;
-  background-blend-mode: darken;
-  padding:0px 0px;
-  
   color: rgb(255, 255, 255);
-  text-align: center;
 }
 
 .header h3{
     color: rgb(255, 255, 255);
 }
-.header-button{
-    display: inline-block;
-    margin-top: 60px;
-    text-decoration: none;
-    background:#ac3b61 ;
-    color: white;
-    border-radius: 40%;
-    padding: 14px 14px;
-    transition-property:background;
-    
-}
-.header-button:hover{
-    background:#7a2a45 ;
-    transition-duration: 200ms;
-   
+
+.header-content{
+  display: flex;
+  justify-content: space-evenly;
+  padding:22vh 0px;
 }
 
 .header-content h1{
-  font-size: 44px;
+  font-weight: normal;
+  font-size: 80px;
 }
 .header-content h3{
-  font-size: 22px;
+  font-weight: lighter;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
 }
+
+.header-button{
+  display: inline-block;
+  margin-top: 60px;
+  text-decoration: none;
+  background:#358DDF ;
+  color: white;
+  font-weight: lighter;
+  font-size: 20px;
+  border-radius: 3%;
+  padding: 16px 28px;
+  transition-property:background;
+    
+}
+.header-button:hover{
+  color: white;
+  background:#205485 ;
+  transition-duration: 200ms;
+   
+}
+
+
+.content-right img{
+  width: 540px;
+}
+
 
 p{
     line-height: 150%;
