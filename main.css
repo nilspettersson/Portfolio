@@ -68,7 +68,7 @@ a:hover{
 .header-content{
   display: flex;
   justify-content: space-evenly;
-  padding:22vh 0px;
+  padding:16vh 0px;
 }
 
 .header-content h1{
@@ -83,7 +83,7 @@ a:hover{
 
 .header-button{
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 40px;
   text-decoration: none;
   background:#358DDF ;
   color: white;
@@ -105,6 +105,50 @@ a:hover{
 .content-right img{
   width: 540px;
 }
+
+svg{
+  width: 600px;
+}
+
+#box{
+  animation: box 2000ms ease;
+  animation-fill-mode: forwards;
+}
+@keyframes box{
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  75%{
+    transform: translateX(-30px);
+  }
+  100%{
+    transform: translate(-30px, -56px)
+  }
+}
+
+.content-right img{
+  width: 540px;
+}
+
+#text{
+  animation: text 4000ms ease;
+  animation-fill-mode: forwards;
+}
+@keyframes text{
+  0%{
+    transform: translateX(208px);
+  }
+  60%{
+    transform: translateX(208px);
+  }
+  100%{
+    transform: translateX(0)
+  }
+}
+
 
 
 p{
