@@ -68,7 +68,7 @@ a:hover{
 .header-content{
   display: flex;
   justify-content: space-evenly;
-  padding:16vh 0px;
+  padding:19vh 0px;
 }
 
 .header-content h1{
@@ -101,10 +101,6 @@ a:hover{
    
 }
 
-
-.content-right img{
-  width: 540px;
-}
 
 svg{
   width: 600px;
@@ -148,6 +144,23 @@ svg{
     transform: translateX(0)
   }
 }
+
+
+
+.projects-header{
+  background: #2B75BA;
+  padding: 30px 80px;
+}
+.projects-header h1, p{
+  color:white;
+  margin: 0px;
+  padding: 15px 0px;
+}
+
+
+
+
+
 
 
 
@@ -225,12 +238,6 @@ img{
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
-}
-.main-header h1{
-    /*display: inline-block;*/
-    margin: 0px;
-    margin-top: 60px;
-    font-size: 40px;
 }
 
 .project-left{
