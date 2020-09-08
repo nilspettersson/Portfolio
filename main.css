@@ -8,6 +8,15 @@ body{
 }
 
 
+
+.hamburger{
+  display: none;
+}
+.toggle{
+  display: none;
+}
+
+
 header{
   position: fixed;
   display: flex;
@@ -34,9 +43,12 @@ header{
 nav{
   position: fixed;
   margin-right: 80px;
+  right: 10px;
+}
+
+nav > div{
   display: flex;
   align-items: center;
-  right: 10px;
 }
 
 nav a{
@@ -480,6 +492,103 @@ svg{
   }
 }
 @media only screen and (max-width: 1000px){
+  nav{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: -700px;
+    margin-top: 0px;
+  }
+
+  header{
+    height: 78px;
+  }
+
+  .toggle{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    opacity: 0;
+  }
+  .hamburger{
+      position: absolute;
+      top: 10px;
+      right: 40px;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .hamburger > div{
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      transition:all 400ms ease;
+  }
+  .hamburger > div::before,
+  .hamburger > div::after{
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: -12px;
+      width: 100%;
+      height: 2px;
+      background: inherit;
+  }
+  .hamburger > div::after{
+      top: 12px;
+  }
+
+  .toggle:checked + .hamburger > div{
+      transform: rotate(135deg);
+  }
+  .toggle:checked + .hamburger > div:before,
+  .toggle:checked + .hamburger > div:after{
+      top: 0;
+      transform: rotate(90deg);
+  }
+  .toggle:checked ~ nav{
+    transition: 220ms ease-out;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #181818fb;
+    margin: 0px;
+    padding-right: 140px;
+    padding-left: 20px;
+    height: 100vh;
+    margin-top: 78px;
+  }
+  .toggle:checked ~ nav > div{
+    display: grid;
+    position: relative;
+  }
+  .nav a{
+    margin: 20px;
+  }
+  .logo{
+    position: absolute;
+    top: 0px;
+  }
+
+
+
+
     .grid{
       grid-template-columns: 1fr 1fr;
     }
@@ -489,6 +598,7 @@ svg{
     }
 }
 @media only screen and (max-width: 700px){
+
   .space{
     padding-left: 20px;
     padding-right: 20px;
