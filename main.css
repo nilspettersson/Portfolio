@@ -189,7 +189,7 @@ svg{
 .project{
   text-align: center;
 }
-.project  h3, p, a{
+.project-content h3, .project-content p, .project-content a{
   color: rgba(128, 128, 128, 0);
   font-weight: normal;
 }
@@ -295,12 +295,7 @@ svg{
   gap: 120px;
   grid-template-columns: 1fr 1fr;
   margin-top: 0px;
-  padding-bottom: 40px;
-
-  padding-left:4%;
-  padding-right:4%;
-
-  padding-top: 340px;
+  padding-top: 420px;
   padding-bottom: 200px;
 
   color: rgb(255, 255, 255);
