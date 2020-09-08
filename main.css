@@ -9,9 +9,13 @@ body{
 
 
 header{
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #181818;
+  width: 100vw;
+  
 }
 
 .logo{
@@ -21,16 +25,18 @@ header{
 .logo h1{
   font-size: 48px;
   font-weight: 800;
+  margin: 10px 0px;
 }
 .logo img{
   width: 80px;
 }
 
 nav{
+  position: fixed;
   margin-right: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  right: 10px;
 }
 
 nav a{
@@ -126,6 +132,26 @@ svg{
   }
 }
 
+#box{
+  animation: box 2000ms ease;
+  animation-fill-mode: forwards;
+}
+@keyframes box{
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(0px);
+  }
+  75%{
+    transform: translateX(-30px);
+  }
+  100%{
+    transform: translate(-30px, -56px);
+    
+  }
+}
+
 .content-right img{
   width: 540px;
 }
@@ -142,7 +168,7 @@ svg{
     transform: translateX(208px);
   }
   100%{
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
