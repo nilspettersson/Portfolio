@@ -86,7 +86,7 @@ a:hover{
 .header-content{
   display: flex;
   justify-content: space-between;
-  padding:19vh 0px;
+  padding:26vh 0px;
 }
 
 
@@ -194,11 +194,6 @@ svg{
   margin-top: 120px;
 }
 
-.project{
-  text-align: center;
-}
-
-
 .projects-header{
   background: #2B75BA;
   padding: 35px 120px;
@@ -208,6 +203,33 @@ svg{
   margin: 0px;
   padding: 12px 0px;
 }
+
+.project{
+  text-align: center;
+}
+.project h3, p{
+  color: rgb(255, 255, 255)
+}
+.project > div{
+  position: relative;
+}
+
+.project-content{
+  display: none;
+  position: absolute;
+  top: 54px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+}
+.project-content:hover, .project-img:hover  ~.project-content{
+  transition: 100ms ease;
+  display: block;
+}
+.project-img:hover{
+  filter: brightness(0.4);
+}
+
 .project img{
   width: 100%;
 }
@@ -637,6 +659,7 @@ svg{
   .header-content{
     display: block;
     padding-top: 160px;
+    text-align: center;
   }
   .header-content h1{
     line-height: 38px;
