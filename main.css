@@ -387,7 +387,7 @@ input[type=email]:focus{
 .footer-back p, .footer-back h3{
   font-weight: lighter;
   text-align: left;
-  line-height: 4px;
+  line-height: 14px;
   background: none;
   color: rgb(255, 255, 255);
 }
@@ -597,27 +597,29 @@ input[type=email]:focus{
 
   .header-content{
     display: block;
-    padding-top: 160px;
+    padding-top: 120px;
     text-align: center;
   }
   .header-content h1{
-    line-height: 38px;
-    font-size: 50px;
+    line-height: 28px;
+    font-size: 40px;
   }
   .header-content h3{
-    line-height: 38px;
+    line-height: 28px;
     font-size: 20px;
   }
   .header-button{
-    margin-top: 40px;
+    margin: 0px 100px;
+    margin-top: 30px;
     display: block;
     text-align: center;
+    
   }
   svg{
-    width: 450px;
+    width: 380px;
   }
   .content-right{
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
   }
 
