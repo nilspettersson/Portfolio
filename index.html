@@ -26,10 +26,10 @@
             <nav>
                 <div>
                     <a href="#">Home</a>
-                    <a href="#">Portfolio</a>
+                    <a href="#" onclick="smoothScroll(document.getElementById('projects'))">Portfolio</a>
                     <a href="#">Skills</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="#" onclick="smoothScroll(document.getElementById('about'))">About</a>
+                    <a href="#" onclick="smoothScroll(document.getElementById('contact'))">Contact</a>
                     <a class="link" href="https://github.com/nilspettersson" target="_blank">
                         <img class="icon" src="icons/github.svg">
                     </a>
@@ -45,11 +45,11 @@
             <div class="content-left">
                 <h1>Nils Pettersson</h1>
                 <h3>Fullstack developer</h3>
-                <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('second'))">View my projects</a>
+                <a href="#" class="header-button" onclick="smoothScroll(document.getElementById('projects'))">View my projects</a>
             </div>
             <div class="content-right">
                 <svg viewBox="0 20 466 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="laptop 1">
+                    <g id="laptop">
                         <g id="screen">
                         <path id="Vector" d="M45.9731 278.983V45.3631H392.861V278.983H45.9731Z" fill="#4084B6"/>
                         <path id="Vector_2" d="M88.5239 79.3855H85.9425L79.3203 67.9451V79.3855H76.7389V63.2602H79.3203L85.9628 74.7451V63.2602H88.5239V79.3855ZM94.1562 73.3939V79.3855H91.5748V63.2602H97.2582C98.918 63.2602 100.234 63.7291 101.207 64.6667C102.186 65.6046 102.676 66.8448 102.676 68.3881C102.676 69.9681 102.197 71.1974 101.238 72.0759C100.285 72.9546 98.9485 73.3939 97.2274 73.3939H94.1562ZM94.1562 71.1457H97.2582C98.1764 71.1457 98.877 70.913 99.3602 70.448C99.8431 69.9754 100.084 69.2963 100.084 68.4101C100.084 67.5389 99.8395 66.8448 99.3499 66.3282C98.8601 65.8038 98.1866 65.5343 97.3296 65.5196H94.1562V71.1457Z" fill="white"/>
@@ -102,7 +102,7 @@
 
     <div class="container">
 
-        <div class="projects-header space">
+        <div id="projects" class="projects-header space">
             <h1>Projects</h1>
             <p>Here is some of my work, more can be found on my github</p>
         </div>
@@ -160,14 +160,14 @@
 
         <div class="contact">
 
-            <div class="contact-text">
+            <div id="about" class="contact-text">
                 <h1>About me</h1>
                 <p>My name is Nils Pettersson, I love to learn new things and creating scalable software.
                     I have a passion for algorithms and problem solving. On this page you can see some of my projects, more projects can be found on my github!
                 </p>
             </div>
     
-            <div class="form">
+            <div id="contact" class="form">
                 <h1>Contact</h1>
                 <form action="https://formspree.io/mbjzeolb" method="POST">
                     <label class="email">
@@ -195,7 +195,7 @@
             <p>Number: 072417855</p>
         </div>
         <div>
-            <h3>attribute</h3>
+            <h3>Attributes</h3>
             <a href='https://www.freepik.com/photos/pattern'>Pattern photo created by dashu83 - www.freepik.com</a>
 
         </div>
