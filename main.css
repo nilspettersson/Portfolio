@@ -237,7 +237,6 @@ svg{
   background: rgba(0, 0, 0, 0.822);
 }
 .project-content:hover h3, a{
-  transition-duration: 200ms;
   color: rgb(255, 255, 255);
 }
 .project-content:hover a{
@@ -474,22 +473,30 @@ svg{
   }
 
   .footer-back{
-    padding: 10px;
-    background: #2B75BA;
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    background: #222222;
+    text-align: left;
+  }
+  .footer-back p, .footer-back h3{
+    font-weight: lighter;
+    text-align: left;
+    line-height: 4px;
+    background: none;
+    color: rgb(255, 255, 255);
+  }
+  .footer-back p{
+    font-size: 12px;
   }
   .footer-back a{
-    margin: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 10px;
     background: none;
     color: rgb(255, 255, 255);
   }
-
-  .footer-back a:hover{
-    margin: 10px;
-    background: none;
-    color: rgb(255, 255, 255);
-  }
-
 
   * {box-sizing:border-box}
 
