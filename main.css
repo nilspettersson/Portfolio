@@ -477,6 +477,18 @@ svg{
   padding-right: 240px;
 }
 
+@media only screen and (max-width: 1700px){
+  .space{
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  svg{
+    width: 300px;
+  }
+  .content-right{
+    margin-top: 120px;
+  }
+}
 
 @media only screen and (max-width: 1300px){
   .space{
@@ -492,8 +504,32 @@ svg{
   }
 }
 @media only screen and (max-width: 1000px){
+  .header-content{
+    /*display: block;*/
+    padding-top: 160px;
+  }
+  .header-content h1{
+    line-height: 38px;
+    font-size: 40px;
+  }
+  .header-content h3{
+    line-height: 38px;
+    font-size: 20px;
+  }
+  .header-button{
+    margin-top: 20px;
+    
+  }
+  svg{
+    width: 280px;
+  }
+  .content-right{
+    margin-top: 40px;
+    text-align: left;
+  }
+
   nav{
-    display: block;
+    display: none;
     position: absolute;
     top: 50px;
     right: -700px;
@@ -598,6 +634,30 @@ svg{
     }
 }
 @media only screen and (max-width: 700px){
+  .header-content{
+    display: block;
+    padding-top: 160px;
+  }
+  .header-content h1{
+    line-height: 38px;
+    font-size: 50px;
+  }
+  .header-content h3{
+    line-height: 38px;
+    font-size: 20px;
+  }
+  .header-button{
+    margin-top: 40px;
+    display: block;
+    text-align: center;
+  }
+  svg{
+    width: 450px;
+  }
+  .content-right{
+    margin-top: 80px;
+    text-align: center;
+  }
 
   .space{
     padding-left: 20px;
