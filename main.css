@@ -383,31 +383,35 @@ svg{
   }
 
   .contact{
+    background-image: url("contact.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: 0px 80px;
+
     display: grid;
+    gap: 120px;
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
+    margin-top: 0px;
     padding-bottom: 40px;
 
     padding-left:4%;
     padding-right:4%;
 
-    background: rgb(255, 255, 255);
-    color: rgb(70, 70, 70);
+    padding-top: 260px;
+
+    color: rgb(255, 255, 255);
 
   }
-
+  .contact p{
+    color: rgb(255, 255, 255);
+  }
   .contact-text{
     padding:0px 20px;
   }
-
-
   .contact h2{
       padding-top: 30px;
   }
-
-
   .form{
-    background: rgb(255, 255, 255);
     padding:0px 20px;
     width: 100%;
     max-width: 600px;
@@ -415,7 +419,6 @@ svg{
   .form p{
     line-height: 0.9;
   }
-
   .email{
     display: block;
     padding: 6px;
@@ -435,9 +438,7 @@ svg{
     outline: none !important;
     box-shadow: 0 0 4px rgb(59, 134, 172);
     transition-duration: 240ms;
-}
-
-
+  }
 
   input[type=email]{
     border:solid rgba(128, 128, 128, 0.726) 1px;
@@ -457,29 +458,30 @@ svg{
     display: block;
     border: none;
     text-decoration: none;
-    background:rgb(59, 134, 172);
+    font-size: 16px;
+    background:rgb(71, 71, 71);
     color: white;
-    border-radius: 40%;
-    padding: 10px 20px;
+    border-radius: 16%;
+    padding: 10px 22px;
     margin-left: 8px;
     margin-top: 10px;
     transition-property:background;
   }
   .email-send:hover{
-    background:rgb(36, 82, 105);
+    background:rgb(32, 32, 32);
     transition-duration: 200ms;
-   
+   cursor: pointer;
   }
 
   .footer-back{
     padding: 10px;
-    background: rgb(26, 26, 26);
+    background: #2B75BA;
     text-align: center;
   }
   .footer-back a{
     margin: 10px;
     background: none;
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
   }
 
   .footer-back a:hover{
@@ -591,7 +593,6 @@ svg{
     top: 50px;
     right: -700px;
     margin-top: 0px;
-    
   }
 
   header{
@@ -602,7 +603,7 @@ svg{
     display: block;
     position: absolute;
     top: 10px;
-    right: 40px;
+    right: 60px;
     z-index: 2;
     cursor: pointer;
     width: 50px;
@@ -613,7 +614,7 @@ svg{
   .hamburger{
       position: absolute;
       top: 10px;
-      right: 40px;
+      right: 60px;
       z-index: 1;
       width: 50px;
       height: 50px;
