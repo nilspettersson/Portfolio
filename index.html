@@ -10,7 +10,7 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <div class="header">
+    <div id="home" class="header">
         <header class="nav">
             <div class="logo">
                 <h1>NP</h1>
@@ -25,11 +25,9 @@
             
             <nav>
                 <div>
-                    <a href="#">Home</a>
-                    <a href="#" onclick="smoothScroll(document.getElementById('projects'))">Portfolio</a>
-                    <a href="#">Skills</a>
-                    <a href="#" onclick="smoothScroll(document.getElementById('about'))">About</a>
-                    <a href="#" onclick="smoothScroll(document.getElementById('contact'))">Contact</a>
+                    <a id="homeLink" href="#">Home</a>
+                    <a id="portfolioLink" href="#" onclick="smoothScroll(document.getElementById('projects'))">Portfolio</a>
+                    <a id="aboutLink" href="#" onclick="smoothScroll(document.getElementById('about'))">About</a>
                     <a class="link" href="https://github.com/nilspettersson" target="_blank">
                         <img class="icon" src="icons/github.svg">
                     </a>
@@ -152,10 +150,8 @@
                 </div>
             </div>
 
-            
 
         </div>
-
 
 
         <div class="contact space">
