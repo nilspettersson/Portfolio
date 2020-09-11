@@ -62,15 +62,13 @@ nav a{
 }
 
 .active{
-  transition-duration: 300ms;
-  background: #296fb1;
-  border-radius: 3px;
+  border-bottom: white solid 1px;
   color:white;
 }
 
 a:hover{
-  transition: 200ms;
-  color: #7c7c7c;
+  transition: 180ms;
+  color: #969696;
 }
 
 .icon{
@@ -559,9 +557,9 @@ input[type=email]:focus{
     position: absolute;
     top: 0px;
     right: 0px;
-    background: #181818fb;
+    background: #181818;
     margin: 0px;
-    padding-right: 140px;
+    padding-right: 100px;
     padding-left: 20px;
     height: 100vh;
     margin-top: 78px;
@@ -571,7 +569,8 @@ input[type=email]:focus{
     position: relative;
   }
   .nav a{
-    margin: 20px;
+    text-align: left;
+    margin: 20px 20px;
   }
   .logo{
     position: absolute;
@@ -613,11 +612,10 @@ input[type=email]:focus{
     font-size: 20px;
   }
   .header-button{
-    margin: 0px 80px;
-    margin-top: 30px;
-    display: block;
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
+    padding: 10px 20px;
   }
   svg{
     width: 380px;
