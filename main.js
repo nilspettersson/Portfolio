@@ -64,7 +64,6 @@ function findClosest(scroll_pos) {
         aboutY += target.offsetTop;
     } while (target = target.offsetParent);
 
-    console.log(scroll_pos);
     let home = Math.abs(homeY - scroll_pos);
     let portfolio = Math.abs(portfolioY - scroll_pos);
     let about = Math.abs(aboutY - scroll_pos);
@@ -97,4 +96,11 @@ function findClosest(scroll_pos) {
     }
     
     
+}
+
+
+
+function openModal(project){
+    let modal = document.getElementById("modal");
+    modal.classList.remove("hide");
 }

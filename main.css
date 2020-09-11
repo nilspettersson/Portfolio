@@ -7,6 +7,26 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.modal-outer{
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(32, 32, 32, 0.822);
+  padding: 60px 240px;
+}
+
+.modal{
+  background: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0px;
+}
+
+.hide{
+  display: none;
+}
 
 
 .hamburger{
@@ -635,12 +655,9 @@ input[type=email]:focus{
 
   .contact{
     gap: 60px;
-
     padding-top: 200px;
     padding-bottom: 100px;
-    
     color: rgb(255, 255, 255);
-
   }
 
 }
