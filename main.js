@@ -104,3 +104,8 @@ function openModal(project){
     let modal = document.getElementById("modal");
     modal.classList.remove("hide");
 }
+
+function closeModal(){
+    let modal = document.getElementById("modal");
+    modal.classList.add("hide");
+}
