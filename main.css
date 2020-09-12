@@ -72,10 +72,10 @@ body{
 }
 
 .modal .left{
-  /*margin: 20px 40px;*/
+  margin: 20px 10px;
 }
 .modal .right{
-  /*margin: 20px 40px;*/
+  margin: 20px 10px;
 }
 
 .modal .skills a{
