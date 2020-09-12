@@ -79,10 +79,18 @@ body{
 }
 
 .modal .skills a{
+  width: 55px;
   background: rgb(82, 82, 82);
   color:white;
   text-align: center;
   margin-top: 10px;
+  padding: 14px 0px;
+}
+
+.modal .buttons{
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
 }
 
 .hide{

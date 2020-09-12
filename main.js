@@ -98,8 +98,6 @@ function findClosest(scroll_pos) {
     
 }
 
-
-
 function openModal(project){
     let data = project.parentNode.parentNode.childNodes[5].childNodes;
     console.log(data);
@@ -114,8 +112,17 @@ function openModal(project){
     let learned = document.getElementById("learned");
     learned.innerHTML = data[5].innerHTML;
 
-    let right = document.getElementById("right");
-    right.appendChild(data[7]);
+    let tech = document.getElementById("tech");
+    if(tech.childNodes[0] != null){
+        tech.removeChild(tech.childNodes[0]);
+    }
+    tech.appendChild(data[7]);
+
+    let title = project.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[1].innerHTML;
+    document.getElementById("title").innerHTML = title;
+
+    document.getElementById("code").href = data[8].childNodes[1].innerHTML;
+    document.getElementById("demo").href = data[8].childNodes[3].innerHTML;
 }
 
 function closeModal(){
