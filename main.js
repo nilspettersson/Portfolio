@@ -101,8 +101,21 @@ function findClosest(scroll_pos) {
 
 
 function openModal(project){
+    let data = project.parentNode.parentNode.childNodes[5].childNodes;
+    console.log(data);
     let modal = document.getElementById("modal");
     modal.classList.remove("hide");
+
+    let img = document.getElementById("img");
+    img.src = data[1].src;
+
+    let overview = document.getElementById("overview");
+    overview.innerHTML = data[3].innerHTML;
+    let learned = document.getElementById("learned");
+    learned.innerHTML = data[5].innerHTML;
+
+    let right = document.getElementById("right");
+    right.appendChild(data[7]);
 }
 
 function closeModal(){

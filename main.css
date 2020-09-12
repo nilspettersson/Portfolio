@@ -15,7 +15,7 @@ body{
   height: 100%;
   width: 100%;
   background: rgba(32, 32, 32, 0.822);
-  padding: 60px 240px;
+  padding: 20px 240px;
 }
 
 .modal{
@@ -23,6 +23,20 @@ body{
   background: rgb(255, 255, 255);
   height: 100%;
   margin: 0px;
+  padding-top: 1px;
+  border-radius: 10px;
+
+  padding-left: 12%;
+  padding-right: 12%;
+}
+.modal p{
+  color: rgb(39, 39, 39);
+}
+.modal h3{
+  color: rgb(39, 39, 39);
+  font-size: 22px;
+  margin: 5px 0px;
+  margin-top:20px;
 }
 
 #close{
@@ -38,6 +52,38 @@ body{
   cursor: pointer;
 }
 
+.modal .title{
+  text-align: center;
+  color: #2B75BA;
+  font-size: 20px;
+}
+
+.modal .img{
+  text-align: center;
+}
+.modal img{
+  width: 60%;
+  border: rgb(202, 202, 202) solid 1px;
+}
+
+.modal .text{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .left{
+  /*margin: 20px 40px;*/
+}
+.modal .right{
+  /*margin: 20px 40px;*/
+}
+
+.modal .skills a{
+  background: rgb(82, 82, 82);
+  color:white;
+  text-align: center;
+  margin-top: 10px;
+}
 
 .hide{
   display: none;
