@@ -1,4 +1,20 @@
 
+let index = 0;
+let start = false;
+let text = "My name is Nils Pettersson, I love to learn new things and creating scalable software. I have a passion for algorithms and problem solving. On this page you can see some of my projects, more projects can be found on my github!";
+function about(){
+    if(start){
+        document.getElementById("about-text").innerHTML = text.substring(0, index);
+        index++;
+        if(index == text.length + 1){
+            clearInterval(i);
+        }
+    }
+    
+}
+let i = window.setInterval(about,20);
+
+
 window.smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container
@@ -93,10 +109,15 @@ function findClosest(scroll_pos) {
         element.classList.remove("active");
         element = document.getElementById("homeLink");
         element.classList.remove("active");
+
+        start = true;        
     }
     
     
 }
+
+
+
 
 function fixArray(array){
     let newArray = [];
