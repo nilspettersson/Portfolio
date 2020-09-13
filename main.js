@@ -122,10 +122,25 @@ function openModal(project){
     document.getElementById("title").innerHTML = title;
 
     document.getElementById("code").href = data[8].childNodes[1].innerHTML;
+    if(data[8].childNodes[3].innerHTML == "#"){
+        console.log("hide");
+        document.getElementById("demo").classList.add("hide");
+    }
+    else{
+        document.getElementById("demo").classList.remove("hide");
+    }
     document.getElementById("demo").href = data[8].childNodes[3].innerHTML;
 }
 
 function closeModal(){
     let modal = document.getElementById("modal");
     modal.classList.add("hide");
+}
+
+
+window.onclick = function(event) {
+    let modal = document.getElementById("modal");
+    if (event.target == modal) {
+        closeModal();
+    }
 }
