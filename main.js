@@ -98,38 +98,49 @@ function findClosest(scroll_pos) {
     
 }
 
+function fixArray(array){
+    console.log(array);
+    let newArray = [];
+    for(let i = 0; i < array.length; i++){
+        if(array[i].nodeType == Node.ELEMENT_NODE){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray
+}
+
 function openModal(project){
-    let data = project.parentNode.parentNode.childNodes[5].childNodes;
+    let data = fixArray(project.parentNode.parentNode.childNodes[5].childNodes);
     console.log(data);
     let modal = document.getElementById("modal");
     modal.classList.remove("hide");
 
     let img = document.getElementById("img");
-    img.src = data[1].src;
+    img.src = data[0].src;
 
     let overview = document.getElementById("overview");
-    overview.innerHTML = data[3].innerHTML;
+    overview.innerHTML = data[1].innerHTML;
     let learned = document.getElementById("learned");
-    learned.innerHTML = data[5].innerHTML;
+    learned.innerHTML = data[2].innerHTML;
 
     let tech = document.getElementById("tech");
     if(tech.childNodes[0] != null){
         tech.removeChild(tech.childNodes[0]);
     }
-    tech.appendChild(data[7]);
+    tech.appendChild(data[3]);
 
     let title = project.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[1].innerHTML;
     document.getElementById("title").innerHTML = title;
 
-    document.getElementById("code").href = data[8].childNodes[1].innerHTML;
-    if(data[8].childNodes[3].innerHTML == "#"){
+    document.getElementById("code").href = fixArray(data[4].childNodes)[0].innerHTML;
+    if(data[4].childNodes[3].innerHTML == "#"){
         console.log("hide");
         document.getElementById("demo").classList.add("hide");
     }
     else{
         document.getElementById("demo").classList.remove("hide");
     }
-    document.getElementById("demo").href = data[8].childNodes[3].innerHTML;
+    document.getElementById("demo").href = fixArray(data[4].childNodes)[1].innerHTML;
 }
 
 function closeModal(){
