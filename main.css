@@ -344,6 +344,7 @@ svg{
   margin: 6px;
   margin-top: 8px;
   color:white;
+  font-size: 16px;
   border-radius: 12px;
 }
 .code{
@@ -355,6 +356,7 @@ svg{
   margin: 6px;
   margin-top: 8px;
   color:#292929;
+  font-size: 16px;
   border: #696969 2px solid;
   border-radius: 12px;
 }
