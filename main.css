@@ -21,9 +21,9 @@ body{
 .modal{
   position: relative;
   background: rgb(255, 255, 255);
-  height: 100%;
   margin: 0px;
   padding-top: 1px;
+  padding-bottom: 120px;
   border-radius: 10px;
 
   padding-left: 12%;
@@ -512,6 +512,41 @@ input[type=email]:focus{
 }
 
 @media only screen and (max-width: 1300px){
+  .modal .text{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .modal-outer{
+    padding: 20px 100px;
+  }
+  
+
+  .modal img{
+    width: 90%;
+  }
+  .modal h1{
+    font-size: 24px;
+  }
+  
+  .modal h3{
+    font-size: 18px;
+  }
+
+  .modal p{
+    font-size: 15px;
+    padding: 0px 0px;
+  }
+  
+  .modal .left{
+    margin: 4px 10px;
+  }
+  .modal .right{
+    margin: 4px 10px;
+  }
+
+
   .project h3{
     font-size: 20px;
   }
@@ -540,8 +575,26 @@ input[type=email]:focus{
   }
 }
 @media only screen and (max-width: 1000px){
+  .modal-outer{
+    padding: 20px 20px;
+  }
+
+  .modal img{
+    width: 100%;
+  }
+
+  .modal{
+    padding-left:4%;
+    padding-right:4%;
+  }
+  .modal .left{
+    margin: 4px 0px;
+  }
+  .modal .right{
+    margin: 4px 0px;
+  }
+
   .header-content{
-    /*display: block;*/
     padding-top: 160px;
   }
   .header-content h1{
