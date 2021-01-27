@@ -362,6 +362,7 @@ svg{
 }
 
 .demo:hover{
+  cursor: pointer;
   background: #163d61;
   color: white;
 }
@@ -450,16 +451,16 @@ input[type=email]:focus{
   border: none;
   text-decoration: none;
   font-size: 16px;
-  background:rgb(71, 71, 71);
+  background:#194670;
   color: white;
-  border-radius: 16%;
+  border-radius: 4px;
   padding: 10px 22px;
   margin-left: 8px;
   margin-top: 10px;
   transition-property:background;
 }
 .email-send:hover{
-  background:rgb(32, 32, 32);
+  background:#12304d;
   transition-duration: 200ms;
   cursor: pointer;
 }
@@ -506,10 +507,10 @@ input[type=email]:focus{
     gap: 80px 60px;
   }
   svg{
-    width: 300px;
+    width: 32vw;
   }
   .content-right{
-    margin-top: 120px;
+    margin-top: 80px;
   }
 }
 
@@ -756,6 +757,7 @@ input[type=email]:focus{
     padding: 10px 20px;
   }
   svg{
+    display: none;
     width: 380px;
   }
   .content-right{
