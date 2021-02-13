@@ -287,6 +287,8 @@ svg{
 }
 .project h3{
   font-size: 30px;
+  margin: 0;
+  margin-bottom: 1.4rem;
 }
 .project > div{
   position: relative;
@@ -300,7 +302,6 @@ svg{
   text-align: center;
   width: 100%;
   height: 100%;
-  padding: 40px;
 }
 .project-content:hover{
   transition-duration: 200ms;
@@ -313,6 +314,15 @@ svg{
   transition-duration: 200ms;
   background:rgb(94, 94, 94);
   color: rgb(255, 255, 255);
+}
+
+.project-content > div {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
 }
 
 .skills{
@@ -552,7 +562,7 @@ input[type=email]:focus{
 
 
   .project h3{
-    font-size: 20px;
+    font-size: 24px;
   }
   .project-content{
     padding: 28px;
@@ -727,18 +737,16 @@ input[type=email]:focus{
 @media only screen and (max-width: 700px){
   .project h3{
     font-size: 34px;
-  }
-  .project-content{
-    padding: 40px;
+    margin-bottom: 30px;
   }
   .skills a{
     display: inline-block;
-    font-size: 80%;
-    width: 35px;
+    width: 60px;
     line-height: 0px;
-    margin-right: 2px;
+    margin-right: 4px;
     border-radius: 40%;
     font-size: 12px;
+    padding: 14px 0px;
   }
 
   .header-content{
