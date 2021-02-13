@@ -1,17 +1,22 @@
-let index = 0;
-let start = false;
-let text = "My name is Nils Pettersson, I love to learn new things and creating scalable software. I have a passion for algorithms and problem solving. On this page you can see some of my projects, more projects can be found on my github!";
+let index = 1;
+let aboutStart = false;
+let text = "About me";
 function about(){
-    if(start){
-        document.getElementById("about-text").innerHTML = text.substring(0, index);
+    if(aboutStart){
+        if(index == text.length){
+            document.getElementById("about-header").innerHTML = text.substring(0, index);
+        }
+        else {
+            document.getElementById("about-header").innerHTML = text.substring(0, index) + '|';
+        }
         index++;
         if(index == text.length + 1){
-            clearInterval(i);
+            clearInterval(aboutInterval);
         }
     }
     
 }
-window.setInterval(about,20);
+let aboutInterval = window.setInterval(about, 240);
 
 
 window.smoothScroll = function(target) {
@@ -109,7 +114,7 @@ function findClosest(scroll_pos) {
         element = document.getElementById("homeLink");
         element.classList.remove("active");
 
-        start = true;        
+        aboutStart = true;        
     }
     
     
