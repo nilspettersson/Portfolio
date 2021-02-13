@@ -136,7 +136,7 @@ nav > div{
 
 nav a{
   margin: 0px 28px;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 20px;
   text-decoration: none;
   color: rgb(226, 226, 226);
@@ -185,7 +185,7 @@ a:hover{
   font-size: 80px;
 }
 .header-content h3{
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 40px;
   color: rgb(255, 255, 255);
 }
@@ -196,7 +196,7 @@ a:hover{
   text-decoration: none;
   background:#358DDF ;
   color: white;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 20px;
   border-radius: 3%;
   padding: 16px 28px;
@@ -474,7 +474,7 @@ input[type=email]:focus{
   text-align: left;
 }
 .footer-back p, .footer-back h3{
-  font-weight: lighter;
+  font-weight: normal;
   text-align: left;
   line-height: 14px;
   background: none;
@@ -485,7 +485,7 @@ input[type=email]:focus{
 }
 .footer-back a{
   font-size: 12px;
-  font-weight: lighter;
+  font-weight: normal;
   text-align: left;
   line-height: 10px;
   background: none;
