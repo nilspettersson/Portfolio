@@ -78,7 +78,7 @@ body{
   margin: 20px 10px;
 }
 
-.modal .skills a{
+.modal .skills p{
   width: 55px;
   background: rgb(82, 82, 82);
   color:white;
@@ -282,7 +282,7 @@ svg{
   color: rgba(128, 128, 128, 0);
   font-weight: normal;
 }
-.skills a{
+.skills p{
   color: rgba(255, 0, 0, 0);
 }
 .project h3{
@@ -310,7 +310,7 @@ svg{
 .project-content:hover h3, a{
   color: rgb(255, 255, 255);
 }
-.project-content:hover a{
+.project-content:hover p{
   transition-duration: 200ms;
   background:rgb(94, 94, 94);
   color: rgb(255, 255, 255);
@@ -331,7 +331,7 @@ svg{
   margin-left: 0px;
   margin-right: 0px;
 }
-.skills a{
+.skills p{
   margin-bottom: 10px;
   display: inline-block;
   font-size: 80%;
@@ -567,7 +567,7 @@ input[type=email]:focus{
   .project-content{
     padding: 28px;
   }
-  .skills a{
+  .skills p{
     display: inline-block;
     font-size: 80%;
     width: 44px;
@@ -736,7 +736,7 @@ input[type=email]:focus{
     font-size: 34px;
     margin-bottom: 30px;
   }
-  .skills a{
+  .skills p{
     display: inline-block;
     width: 60px;
     line-height: 0px;
