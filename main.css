@@ -32,7 +32,7 @@ body{
 .modal p{
   color: rgb(39, 39, 39);
 }
-.modal h3{
+.modal h2{
   color: rgb(39, 39, 39);
   font-size: 22px;
   margin: 5px 0px;
@@ -169,7 +169,7 @@ a:hover{
   color: rgb(255, 255, 255);
 }
 
-.header h3{
+.header h2{
     color: rgb(255, 255, 255);
 }
 
@@ -184,7 +184,7 @@ a:hover{
   font-weight: normal;
   font-size: 80px;
 }
-.header-content h3{
+.header-content h2{
   font-weight: normal;
   font-size: 40px;
   color: rgb(255, 255, 255);
@@ -194,7 +194,7 @@ a:hover{
   display: inline-block;
   margin-top: 40px;
   text-decoration: none;
-  background:#358DDF ;
+  background:#2566a3;
   color: white;
   font-weight: normal;
   font-size: 20px;
@@ -278,14 +278,14 @@ svg{
 .project{
   text-align: center;
 }
-.project-content h3, .project-content p, .project-content a{
+.project-content h2, .project-content p, .project-content a{
   color: rgba(128, 128, 128, 0);
   font-weight: normal;
 }
 .skills p{
   color: rgba(255, 0, 0, 0);
 }
-.project h3{
+.project h2{
   font-size: 30px;
   margin: 0;
   margin-bottom: 1.4rem;
@@ -307,7 +307,7 @@ svg{
   transition-duration: 200ms;
   background: rgba(0, 0, 0, 0.822);
 }
-.project-content:hover h3, a{
+.project-content:hover h2, a{
   color: rgb(255, 255, 255);
 }
 .project-content:hover p{
@@ -483,7 +483,7 @@ input[type=email]:focus{
   background: #222222;
   text-align: left;
 }
-.footer-back p, .footer-back h3{
+.footer-back p, .footer-back h2{
   font-weight: normal;
   text-align: left;
   line-height: 14px;
@@ -544,7 +544,7 @@ input[type=email]:focus{
     font-size: 24px;
   }
   
-  .modal h3{
+  .modal h2{
     font-size: 18px;
   }
 
@@ -561,7 +561,7 @@ input[type=email]:focus{
   }
 
 
-  .project h3{
+  .project h2{
     font-size: 24px;
   }
   .project-content{
@@ -612,7 +612,7 @@ input[type=email]:focus{
     line-height: 38px;
     font-size: 40px;
   }
-  .header-content h3{
+  .header-content h2{
     line-height: 38px;
     font-size: 20px;
   }
@@ -732,7 +732,7 @@ input[type=email]:focus{
   }
 }
 @media only screen and (max-width: 700px){
-  .project h3{
+  .project h2{
     font-size: 34px;
     margin-bottom: 30px;
   }
@@ -753,7 +753,7 @@ input[type=email]:focus{
     line-height: 28px;
     font-size: 40px;
   }
-  .header-content h3{
+  .header-content h2{
     line-height: 28px;
     font-size: 20px;
   }
