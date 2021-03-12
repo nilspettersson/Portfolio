@@ -50,6 +50,7 @@ body{
 }
 #close:hover{
   cursor: pointer;
+  color:rgb(126, 126, 126);
 }
 
 .modal .title{
