@@ -131,8 +131,8 @@ function fixArray(array){
 }
 
 function openModal(project){
-    console.log(project.parentNode.parentNode.childNodes[5]);
-    let data = fixArray(project.parentNode.parentNode.childNodes[5].childNodes);
+    project = project.parentNode.parentNode;
+    let data = fixArray(project.childNodes[5].childNodes);
     console.log(data);
     let modal = document.getElementById("modal");
     modal.classList.remove("hide");
@@ -149,9 +149,8 @@ function openModal(project){
     if(tech.childNodes[0] != null){
         tech.removeChild(tech.childNodes[0]);
     }
-    tech.appendChild(data[3].cloneNode(true));
-
-    let title = project.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[1].innerHTML;
+    tech.appendChild(project.querySelector(".skills").cloneNode(true));
+    let title = project.querySelector("h2").innerHTML;
     document.getElementById("title").innerHTML = title;
 
     document.getElementById("code").href = fixArray(data[4].childNodes)[0].innerHTML;
