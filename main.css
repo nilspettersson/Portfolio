@@ -425,44 +425,35 @@ svg{
   display: block;
   padding: 6px;
 }
-input:focus{
-  border:none;
+input:focus, textarea:focus {
   outline: none !important;
 }
 
 textarea{
-  border:solid rgba(128, 128, 128, 0.726) 1px;
+  border:1px solid rgba(128, 128, 128, 0.726) 1px;
   border-radius: 4px;
   padding: 12px 8px;
   width:100%;
   resize: none;
 }
-textarea:focus{
-  border:1px solid rgb(59, 134, 172);
+input[type=email]:focus, textarea:focus {
+  border:1px solid rgba(37, 37, 37, 0.877);
   outline: none !important;
-  box-shadow: 0 0 4px rgb(59, 134, 172);
-  transition-duration: 240ms;
+  box-shadow: 0 0 4px rgba(43, 43, 43, 0.24);
 }
 
 input[type=email]{
-  border:solid rgba(128, 128, 128, 0.726) 1px;
+  border:1px solid rgba(128, 128, 128, 0);
   border-radius: 2px;
   padding: 12px 8px;
   width:100%
 }
-input[type=email]:focus{
-  transition-duration: 240ms;
-  border:1px solid rgb(59, 134, 172);
-  box-shadow: 0 0 4px rgb(59, 134, 172);
-  border-radius: 3px;
-  width:100%
-}
-
 .email-send{
   display: block;
   border: none;
   text-decoration: none;
   font-size: 16px;
+  border:1px solid rgba(128, 128, 128, 0);
   background:#194670;
   color: white;
   border-radius: 4px;
@@ -472,9 +463,12 @@ input[type=email]:focus{
   transition-property:background;
 }
 .email-send:hover{
-  background:#12304d;
+  background:#0f283f;
   transition-duration: 200ms;
   cursor: pointer;
+}
+.email-send:focus {
+  border:1px solid rgba(37, 37, 37, 0.877);
 }
 
 .footer-back{
