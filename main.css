@@ -117,7 +117,7 @@ header{
 }
 .logo h1{
   font-size: 48px;
-  font-weight: 800;
+  font-weight: bold;
   margin: 10px 0px;
 }
 .logo img{
@@ -183,11 +183,12 @@ a:hover{
 
 .header-content h1{
   font-weight: normal;
-  font-size: 80px;
+  font-size: 70px;
+  line-height: 40px;
 }
 .header-content h2{
   font-weight: normal;
-  font-size: 40px;
+  font-size: 26px;
   color: rgb(255, 255, 255);
 }
 
@@ -602,6 +603,7 @@ input[type=email]{
   }
 
   .header-content{
+    padding-bottom: 36vh;
     padding-top: 160px;
   }
   .header-content h1{
@@ -609,7 +611,7 @@ input[type=email]{
     font-size: 40px;
   }
   .header-content h2{
-    line-height: 38px;
+    line-height: 28px;
     font-size: 20px;
   }
   .header-button{
@@ -635,9 +637,6 @@ input[type=email]{
   header{
     height: 78px;
   }
-  .logo h1{
-    margin: 0px;
-  }
 
   .toggle{
     display: block;
@@ -646,8 +645,8 @@ input[type=email]{
     right: 60px;
     z-index: 2;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     margin: 8px;
     opacity: 0;
   }
